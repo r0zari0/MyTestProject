@@ -21,6 +21,9 @@
 		C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386B291C7AA4001C4CB3 /* FlowController.swift */; };
 		C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */; };
 		C3203872291C866A001C4CB3 /* AlomofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */; };
+		C3203874291DBD44001C4CB3 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203873291DBD44001C4CB3 /* UserActions.swift */; };
+		C320387829200077001C4CB3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320387629200077001C4CB3 /* UserActionCell.swift */; };
+		C320387929200077001C4CB3 /* UserActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320387729200077001C4CB3 /* UserActionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		C320386B291C7AA4001C4CB3 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Child.swift"; sourceTree = "<group>"; };
 		C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlomofireNetwork.swift; sourceTree = "<group>"; };
+		C3203873291DBD44001C4CB3 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
+		C320387629200077001C4CB3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
+		C320387729200077001C4CB3 /* UserActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserActionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		C3203859291C3A02001C4CB3 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C3203875291FFFDF001C4CB3 /* FoodCell */,
 				C320385A291C3A3C001C4CB3 /* StartScreenVC.swift */,
 				C320385B291C3A3C001C4CB3 /* StartScreenVC.xib */,
 				C3203863291C3B15001C4CB3 /* StartScreenPresenter.swift */,
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C3203867291C441F001C4CB3 /* Model.swift */,
+				C3203873291DBD44001C4CB3 /* UserActions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +145,15 @@
 				C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C3203875291FFFDF001C4CB3 /* FoodCell */ = {
+			isa = PBXGroup;
+			children = (
+				C320387629200077001C4CB3 /* UserActionCell.swift */,
+				C320387729200077001C4CB3 /* UserActionCell.xib */,
+			);
+			path = FoodCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C320387929200077001C4CB3 /* UserActionCell.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
 				C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */,
 				C320385D291C3A3C001C4CB3 /* StartScreenVC.xib in Resources */,
@@ -211,9 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3203872291C866A001C4CB3 /* AlomofireNetwork.swift in Sources */,
+				C320387829200077001C4CB3 /* UserActionCell.swift in Sources */,
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
 				C320385C291C3A3C001C4CB3 /* StartScreenVC.swift in Sources */,
 				C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */,
+				C3203874291DBD44001C4CB3 /* UserActions.swift in Sources */,
 				C3203860291C3A6F001C4CB3 /* Assembler.swift in Sources */,
 				C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */,
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,

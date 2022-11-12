@@ -8,13 +8,20 @@
 import Foundation
 
 protocol StartScreenPresenterProtocol {
-    
+    var userActions: [UserActions] { get }
 }
 
-class StartScreenPresenter: StartScreenPresenterProtocol {
+class StartScreenPresenter {
+    let userActions = UserActions.allCases
+    
     private let navigator: NavigatorProtocol
     
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
     }
+    
+}
+
+extension StartScreenPresenter: StartScreenPresenterProtocol {
+    
 }

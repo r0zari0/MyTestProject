@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UserActionCell" customModule="MyTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="493" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljZ-Zd-2cB">
+                        <rect key="frame" x="75" y="68" width="343" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="96" id="201-Hc-FEV"/>
+                            <constraint firstAttribute="width" constant="343" id="n7Q-VU-sur"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2b-Q6-ihP">
+                        <rect key="frame" x="225.66666666666666" y="93" width="41.999999999999972" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="j2b-Q6-ihP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="0K3-S7-sOH"/>
+                <constraint firstItem="j2b-Q6-ihP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GVo-Ss-zR6"/>
+                <constraint firstItem="ljZ-Zd-2cB" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="S2n-JV-nzq"/>
+                <constraint firstItem="ljZ-Zd-2cB" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="vm7-nF-Mhg"/>
+            </constraints>
+            <size key="customSize" width="493" height="207"/>
+            <connections>
+                <outlet property="foodImageView" destination="ljZ-Zd-2cB" id="x1S-kQ-WhN"/>
+                <outlet property="foodLabel" destination="j2b-Q6-ihP" id="Bt1-BW-whj"/>
+            </connections>
+            <point key="canvasLocation" x="477.09923664122135" y="75"/>
+        </collectionViewCell>
+    </objects>
+</document>
