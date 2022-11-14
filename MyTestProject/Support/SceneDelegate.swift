@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigator = Navigator()
         let vc:FlowController = FlowController(navigator: navigator)
         
-        window?.rootViewController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
         guard let scene = (scene as? UIWindowScene) else { return }

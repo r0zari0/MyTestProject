@@ -15,8 +15,11 @@ class StartScreenVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - Properties
+    
     private let presenter: StartScreenPresenterProtocol
     
+    //MARK: - Init
     
     init(presenter: StartScreenPresenterProtocol) {
         self.presenter = presenter
@@ -26,6 +29,8 @@ class StartScreenVC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,8 @@ private extension StartScreenVC {
     
     func setupNavigationController() {
         title = "Recipies"
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setupCollectionView() {
