@@ -17,8 +17,9 @@ class UserActionCell: UICollectionViewCell {
         backgroundColor = .green
         setupUI()
     }
-    func config(with title: String) {
+    func config(with title: String, type: UserActions) {
         foodLabel.text = title
+        foodImageView.image = type.image
     }
 }
 

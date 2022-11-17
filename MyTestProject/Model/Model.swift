@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct FoodType: Decodable {
     let hits: [Hit]
@@ -29,4 +30,11 @@ struct Recipe: Decodable {
 struct Ingredient: Decodable {
     let text: String
     let image: String?
+}
+
+extension Recipe {
+    func getImage(url: String) -> UIImage? {
+        return UIImage(named: "Meat")
+    }
+    func loadAsyncImage()
 }

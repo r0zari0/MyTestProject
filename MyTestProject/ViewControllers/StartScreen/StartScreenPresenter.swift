@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol StartScreenPresenterProtocol {
     var userActions: [UserActions] { get }
+    func showListFoodVC(indexPath: Int, view: UIViewController)
 }
 
 class StartScreenPresenter {
@@ -23,5 +25,8 @@ class StartScreenPresenter {
 }
 
 extension StartScreenPresenter: StartScreenPresenterProtocol {
-    
+    func showListFoodVC(indexPath: Int, view: UIViewController) {
+        let userAction = userActions[indexPath]
+        navigator.showListFoodVC(view: view, type: userAction)
+    }
 }

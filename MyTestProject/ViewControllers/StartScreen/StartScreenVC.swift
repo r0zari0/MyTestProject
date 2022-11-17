@@ -18,6 +18,7 @@ class StartScreenVC: UIViewController {
     //MARK: - Properties
     
     private let presenter: StartScreenPresenterProtocol
+    private let networking: Networking = Networking()
     
     //MARK: - Init
     
@@ -35,6 +36,15 @@ class StartScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        let net = Networking()
+        net.getModel(type: .fish) { model in
+            print(model.count)
+            print("Fish")
+        }
+        net.getModel(type: .chicken) { model in
+            print(model.count)
+            print("Chicken")
+        }
     }
 }
 
@@ -44,6 +54,7 @@ private extension StartScreenVC {
     func setupUI() {
         setupCollectionView()
         setupNavigationController()
+        
     }
     
     func setupNavigationController() {
@@ -61,6 +72,10 @@ private extension StartScreenVC {
 }
 
 extension StartScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.showListFoodVC(indexPath: indexPath.item, view: self)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         presenter.userActions.count
     }
@@ -70,7 +85,7 @@ extension StartScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         let userAction = presenter.userActions[indexPath.item]
         
-        cell.config(with: userAction.rawValue)
+        cell.config(with: userAction.rawValue, type: userAction)
         
         return cell
     }
@@ -78,6 +93,7 @@ extension StartScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
 
 extension StartScreenVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 32, height: 100)
+        CGSize(width: UIScreen.main.bounds.width - 32, height: 150
+        )
     }
 }

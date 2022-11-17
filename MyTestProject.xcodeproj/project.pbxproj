@@ -24,6 +24,11 @@
 		C3203874291DBD44001C4CB3 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203873291DBD44001C4CB3 /* UserActions.swift */; };
 		C320387829200077001C4CB3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320387629200077001C4CB3 /* UserActionCell.swift */; };
 		C320387929200077001C4CB3 /* UserActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320387729200077001C4CB3 /* UserActionCell.xib */; };
+		C320387E29240922001C4CB3 /* ListFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320387C29240922001C4CB3 /* ListFoodVC.swift */; };
+		C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320387D29240922001C4CB3 /* ListFoodVC.xib */; };
+		C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038802924093D001C4CB3 /* ListFoodPresenter.swift */; };
+		C320388529241228001C4CB3 /* ListFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320388329241228001C4CB3 /* ListFoodCell.swift */; };
+		C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320388429241228001C4CB3 /* ListFoodCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		C3203873291DBD44001C4CB3 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
 		C320387629200077001C4CB3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 		C320387729200077001C4CB3 /* UserActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserActionCell.xib; sourceTree = "<group>"; };
+		C320387C29240922001C4CB3 /* ListFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodVC.swift; sourceTree = "<group>"; };
+		C320387D29240922001C4CB3 /* ListFoodVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFoodVC.xib; sourceTree = "<group>"; };
+		C32038802924093D001C4CB3 /* ListFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenter.swift; sourceTree = "<group>"; };
+		C320388329241228001C4CB3 /* ListFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodCell.swift; sourceTree = "<group>"; };
+		C320388429241228001C4CB3 /* ListFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFoodCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +88,11 @@
 		C3203840291C392B001C4CB3 /* MyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				C320387A292408D1001C4CB3 /* ViewControllers */,
 				C3203870291C85D6001C4CB3 /* Networking */,
 				C320386D291C7F90001C4CB3 /* Extensions */,
 				C3203866291C43FE001C4CB3 /* Model */,
 				C320385E291C3A54001C4CB3 /* Navigator */,
-				C3203859291C3A02001C4CB3 /* StartScreen */,
 				C3203858291C39BD001C4CB3 /* Support */,
 				C320384D291C392D001C4CB3 /* Assets.xcassets */,
 				C320384F291C392D001C4CB3 /* LaunchScreen.storyboard */,
@@ -156,6 +166,35 @@
 			path = FoodCell;
 			sourceTree = "<group>";
 		};
+		C320387A292408D1001C4CB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C320387B292408E6001C4CB3 /* ListFoodVC */,
+				C3203859291C3A02001C4CB3 /* StartScreen */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C320387B292408E6001C4CB3 /* ListFoodVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3203882292411FA001C4CB3 /* ListFoodCell */,
+				C320387C29240922001C4CB3 /* ListFoodVC.swift */,
+				C320387D29240922001C4CB3 /* ListFoodVC.xib */,
+				C32038802924093D001C4CB3 /* ListFoodPresenter.swift */,
+			);
+			path = ListFoodVC;
+			sourceTree = "<group>";
+		};
+		C3203882292411FA001C4CB3 /* ListFoodCell */ = {
+			isa = PBXGroup;
+			children = (
+				C320388329241228001C4CB3 /* ListFoodCell.swift */,
+				C320388429241228001C4CB3 /* ListFoodCell.xib */,
+			);
+			path = ListFoodCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C320387929200077001C4CB3 /* UserActionCell.xib in Resources */,
+				C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */,
+				C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
 				C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */,
 				C320385D291C3A3C001C4CB3 /* StartScreenVC.xib in Resources */,
@@ -228,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C320387E29240922001C4CB3 /* ListFoodVC.swift in Sources */,
+				C320388529241228001C4CB3 /* ListFoodCell.swift in Sources */,
 				C3203872291C866A001C4CB3 /* AlomofireNetwork.swift in Sources */,
 				C320387829200077001C4CB3 /* UserActionCell.swift in Sources */,
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
@@ -238,6 +281,7 @@
 				C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */,
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,
 				C3203864291C3B15001C4CB3 /* StartScreenPresenter.swift in Sources */,
+				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
 				C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */,
 				C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,

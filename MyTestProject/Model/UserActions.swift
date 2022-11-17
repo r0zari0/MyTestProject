@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
 enum UserActions: String, CaseIterable {
     case meat = "Meat"
     case fish = "Fish"
     case chicken = "Chicken"
-    case greens = "Greens"
+    case milk = "Milk"
+    
+    var image: UIImage? {
+        UIImage(named: self.rawValue)
+    }
 }
+

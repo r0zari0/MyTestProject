@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy6-ZU-IuB">
-                        <rect key="frame" x="0.0" y="104" width="343" height="21"/>
+                        <rect key="frame" x="0.0" y="104" width="343" height="116"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="Max"/>
                         <nil key="highlightedColor"/>
@@ -38,6 +38,7 @@
                 <constraint firstItem="kqP-gM-TF6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d7v-hj-HjX"/>
                 <constraint firstItem="dy6-ZU-IuB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ehP-jC-FRb"/>
                 <constraint firstAttribute="trailing" secondItem="kqP-gM-TF6" secondAttribute="trailing" id="kdn-Fv-WWq"/>
+                <constraint firstAttribute="bottom" secondItem="dy6-ZU-IuB" secondAttribute="bottom" id="moe-b7-kQN"/>
                 <constraint firstItem="kqP-gM-TF6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zZd-8i-ui1"/>
                 <constraint firstAttribute="trailing" secondItem="dy6-ZU-IuB" secondAttribute="trailing" id="zfw-J4-z0w"/>
             </constraints>
