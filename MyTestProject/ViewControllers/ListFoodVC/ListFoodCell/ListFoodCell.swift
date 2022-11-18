@@ -27,10 +27,11 @@ class ListFoodCell: UITableViewCell {
      }
      
      func config(with recipe: Recipe) {
-         recipeImage.image = recipe.getImage(url: recipe.image)
+         recipe.loadAsyncImage(image: recipe.image, closure: { image in
+             self.recipeImage.image = image
+         })
          recipeNameLabel.text = recipe.label
          recipeDescriptionLabel.text = recipe.source
          recipeAuthorLabel.text = recipe.source
      }
-     private func getImage
 }
