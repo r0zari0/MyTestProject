@@ -8,7 +8,7 @@
 import UIKit
 
 class FlowController: UIViewController, UITabBarControllerDelegate {
-
+    
     private var embedTabBarVC: UITabBarController = UITabBarController()
     
     private lazy var startVC: UINavigationController = instantiateStartVC()
@@ -23,7 +23,7 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +45,12 @@ extension FlowController {
 
 private extension FlowController {
     func initialSetup() {
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         embedTabBarVC.delegate = self
         embedTabBarVC.viewControllers = [startVC]
         embedTabBarVC.tabBar.isTranslucent = false
         embedTabBarVC.tabBar.tintColor = .black
-        embedTabBarVC.tabBar.unselectedItemTintColor = .green
+        embedTabBarVC.tabBar.unselectedItemTintColor = .black
         addChild(embedTabBarVC, toContainer: view)
     }
 }

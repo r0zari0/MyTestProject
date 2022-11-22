@@ -7,7 +7,7 @@
 
 import Foundation
 
-  //MARK: - Protocol
+//MARK: - Protocol
 
 protocol ListFoodPresenterProtocol {
     var foodRecipes: [Hit] { get }
@@ -17,7 +17,7 @@ protocol ListFoodPresenterProtocol {
 //MARK: - ListFoodPresenter
 class ListFoodPresenter: ListFoodPresenterProtocol {
     
-      //MARK: - Properties
+    //MARK: - Properties
     
     let navigator: NavigatorProtocol
     let networking: NetworkingProtocol

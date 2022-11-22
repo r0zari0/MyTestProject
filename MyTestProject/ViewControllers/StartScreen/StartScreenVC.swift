@@ -10,7 +10,7 @@ import UIKit
 //MARK: - StartScreenVC
 
 class StartScreenVC: UIViewController {
-
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,17 +36,9 @@ class StartScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        let net = Networking()
-        net.getModel(type: .fish) { model in
-            print(model.count)
-            print("Fish")
-        }
-        net.getModel(type: .chicken) { model in
-            print(model.count)
-            print("Chicken")
-        }
     }
 }
+
 
 //MARK: - Private Extension
 
@@ -58,7 +50,7 @@ private extension StartScreenVC {
     }
     
     func setupNavigationController() {
-        title = "Recipies"
+        title = "Recipies" 
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }

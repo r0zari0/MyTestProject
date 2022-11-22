@@ -20,5 +20,12 @@ class Assembler {
         let vc = ListFoodVC(presenter: presenter)
         presenter.view = vc
         return vc
-    }    
+    }
+    
+    func createRecipeDetailsVC(networking: NetworkingProtocol) -> UIViewController {
+        let presenter = RecipeDetailsPresenter(networking: networking)
+        let vc = RecipeDetailsVC(presenter: presenter)
+        
+        return vc
+    }
 }

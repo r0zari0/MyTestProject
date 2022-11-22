@@ -20,7 +20,7 @@ class ListFoodVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-      //MARK: - Properties
+    //MARK: - Properties
     
     let presenter: ListFoodPresenterProtocol
     
@@ -41,14 +41,18 @@ class ListFoodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupUI()
         presenter.getRecipes()
     }
-
+    
 }
 
 //MARK: - Extension
 extension ListFoodVC {
+    func setupUI() {
+        setupTableView()
+    }
+    
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self

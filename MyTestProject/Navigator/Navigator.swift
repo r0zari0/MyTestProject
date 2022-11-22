@@ -26,4 +26,9 @@ class Navigator: NavigatorProtocol {
         let vc = assembler.createListFoodVC(navigator: self, networking: networking, type: type)
         view.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func showRecipeDetailVC(view: UIViewController) {
+        let vc = assembler.createRecipeDetailsVC(networking: networking)
+        view.navigationController?.pushViewController(vc, animated: true)
+    }
 }

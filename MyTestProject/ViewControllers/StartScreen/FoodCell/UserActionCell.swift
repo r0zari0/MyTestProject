@@ -7,24 +7,35 @@
 
 import UIKit
 
-class UserActionCell: UICollectionViewCell {
+//MARK: - UserActionCell
 
+class UserActionCell: UICollectionViewCell {
+    
+    //MARK: - IBOutlets
+    
     @IBOutlet weak private var foodLabel: UILabel!
     @IBOutlet weak private var foodImageView: UIImageView!
     
+    //MARK: - Life Cycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .green
         setupUI()
     }
+    
+    //MARK: - Func
+    
     func config(with title: String, type: UserActions) {
         foodLabel.text = title
         foodImageView.image = type.image
     }
 }
 
+//MARK: - Extension
+
 extension UserActionCell {
     func setupUI() {
+        backgroundColor = .black
         layer.cornerRadius = 8
     }
 }

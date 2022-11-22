@@ -29,6 +29,9 @@
 		C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038802924093D001C4CB3 /* ListFoodPresenter.swift */; };
 		C320388529241228001C4CB3 /* ListFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320388329241228001C4CB3 /* ListFoodCell.swift */; };
 		C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320388429241228001C4CB3 /* ListFoodCell.xib */; };
+		C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */; };
+		C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */; };
+		C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		C32038802924093D001C4CB3 /* ListFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenter.swift; sourceTree = "<group>"; };
 		C320388329241228001C4CB3 /* ListFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodCell.swift; sourceTree = "<group>"; };
 		C320388429241228001C4CB3 /* ListFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFoodCell.xib; sourceTree = "<group>"; };
+		C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsVC.swift; sourceTree = "<group>"; };
+		C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsVC.xib; sourceTree = "<group>"; };
+		C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 		C320387A292408D1001C4CB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C320388729277309001C4CB3 /* RecipeDetailsVC */,
 				C320387B292408E6001C4CB3 /* ListFoodVC */,
 				C3203859291C3A02001C4CB3 /* StartScreen */,
 			);
@@ -193,6 +200,16 @@
 				C320388429241228001C4CB3 /* ListFoodCell.xib */,
 			);
 			path = ListFoodCell;
+			sourceTree = "<group>";
+		};
+		C320388729277309001C4CB3 /* RecipeDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */,
+				C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */,
+				C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */,
+			);
+			path = RecipeDetailsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C320387929200077001C4CB3 /* UserActionCell.xib in Resources */,
+				C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */,
 				C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */,
 				C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
@@ -282,8 +300,10 @@
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,
 				C3203864291C3B15001C4CB3 /* StartScreenPresenter.swift in Sources */,
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
+				C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */,
 				C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */,
 				C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */,
+				C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
