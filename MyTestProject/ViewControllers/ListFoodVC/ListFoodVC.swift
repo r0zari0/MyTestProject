@@ -51,6 +51,7 @@ class ListFoodVC: UIViewController {
 extension ListFoodVC {
     func setupUI() {
         setupTableView()
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     func setupTableView() {
@@ -61,6 +62,10 @@ extension ListFoodVC {
 }
 
 extension ListFoodVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.showRecipeDetailVC(with: presenter.foodRecipes[indexPath.row].recipe, view: self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.foodRecipes.count
     }

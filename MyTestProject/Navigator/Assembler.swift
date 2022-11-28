@@ -22,10 +22,11 @@ class Assembler {
         return vc
     }
     
-    func createRecipeDetailsVC(networking: NetworkingProtocol) -> UIViewController {
-        let presenter = RecipeDetailsPresenter(networking: networking)
+    func createRecipeDetailsVC(networking: NetworkingProtocol, recipe: Recipe) -> UIViewController {
+        let presenter = RecipeDetailsPresenter(networking: networking, recipe: recipe)
         let vc = RecipeDetailsVC(presenter: presenter)
         
         return vc
     }
+    
 }

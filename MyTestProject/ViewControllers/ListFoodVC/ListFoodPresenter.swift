@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: - Protocol
 
 protocol ListFoodPresenterProtocol {
     var foodRecipes: [Hit] { get }
     func getRecipes()
+    func showRecipeDetailVC(with recipe: Recipe, view: UIViewController)
 }
 
 //MARK: - ListFoodPresenter
+
 class ListFoodPresenter: ListFoodPresenterProtocol {
     
     //MARK: - Properties
@@ -40,5 +43,9 @@ extension ListFoodPresenter {
             self.foodRecipes = hit
             self.view?.reload()
         }
+    }
+    
+    func showRecipeDetailVC(with recipe: Recipe, view: UIViewController) {
+        navigator.showRecipeDetailVC(view: view, recipe: recipe)
     }
 }

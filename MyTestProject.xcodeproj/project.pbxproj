@@ -20,7 +20,7 @@
 		C3203868291C441F001C4CB3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203867291C441F001C4CB3 /* Model.swift */; };
 		C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386B291C7AA4001C4CB3 /* FlowController.swift */; };
 		C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */; };
-		C3203872291C866A001C4CB3 /* AlomofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */; };
+		C3203872291C866A001C4CB3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203871291C866A001C4CB3 /* NetworkingService.swift */; };
 		C3203874291DBD44001C4CB3 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203873291DBD44001C4CB3 /* UserActions.swift */; };
 		C320387829200077001C4CB3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320387629200077001C4CB3 /* UserActionCell.swift */; };
 		C320387929200077001C4CB3 /* UserActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320387729200077001C4CB3 /* UserActionCell.xib */; };
@@ -32,6 +32,9 @@
 		C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */; };
 		C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */; };
 		C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */; };
+		C32038912931DAE9001C4CB3 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320388F2931DAE9001C4CB3 /* IngredientsTableViewCell.swift */; };
+		C32038922931DAE9001C4CB3 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32038902931DAE9001C4CB3 /* IngredientsTableViewCell.xib */; };
+		C32038942933E214001C4CB3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038932933E214001C4CB3 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +53,7 @@
 		C3203867291C441F001C4CB3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C320386B291C7AA4001C4CB3 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Child.swift"; sourceTree = "<group>"; };
-		C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlomofireNetwork.swift; sourceTree = "<group>"; };
+		C3203871291C866A001C4CB3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		C3203873291DBD44001C4CB3 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
 		C320387629200077001C4CB3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 		C320387729200077001C4CB3 /* UserActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserActionCell.xib; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsVC.swift; sourceTree = "<group>"; };
 		C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsVC.xib; sourceTree = "<group>"; };
 		C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
+		C320388F2931DAE9001C4CB3 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		C32038902931DAE9001C4CB3 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		C32038932933E214001C4CB3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */,
+				C32038932933E214001C4CB3 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,7 +165,7 @@
 		C3203870291C85D6001C4CB3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C3203871291C866A001C4CB3 /* AlomofireNetwork.swift */,
+				C3203871291C866A001C4CB3 /* NetworkingService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -205,11 +212,21 @@
 		C320388729277309001C4CB3 /* RecipeDetailsVC */ = {
 			isa = PBXGroup;
 			children = (
+				C320388E2931DA92001C4CB3 /* IngredientsCell */,
 				C3203888292773A5001C4CB3 /* RecipeDetailsVC.swift */,
 				C3203889292773A5001C4CB3 /* RecipeDetailsVC.xib */,
 				C320388C292773D5001C4CB3 /* RecipeDetailsPresenter.swift */,
 			);
 			path = RecipeDetailsVC;
+			sourceTree = "<group>";
+		};
+		C320388E2931DA92001C4CB3 /* IngredientsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C320388F2931DAE9001C4CB3 /* IngredientsTableViewCell.swift */,
+				C32038902931DAE9001C4CB3 /* IngredientsTableViewCell.xib */,
+			);
+			path = IngredientsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +291,7 @@
 				C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */,
 				C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */,
 				C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */,
+				C32038922931DAE9001C4CB3 /* IngredientsTableViewCell.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
 				C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */,
 				C320385D291C3A3C001C4CB3 /* StartScreenVC.xib in Resources */,
@@ -289,7 +307,7 @@
 			files = (
 				C320387E29240922001C4CB3 /* ListFoodVC.swift in Sources */,
 				C320388529241228001C4CB3 /* ListFoodCell.swift in Sources */,
-				C3203872291C866A001C4CB3 /* AlomofireNetwork.swift in Sources */,
+				C3203872291C866A001C4CB3 /* NetworkingService.swift in Sources */,
 				C320387829200077001C4CB3 /* UserActionCell.swift in Sources */,
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
 				C320385C291C3A3C001C4CB3 /* StartScreenVC.swift in Sources */,
@@ -302,8 +320,10 @@
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
 				C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */,
 				C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */,
+				C32038912931DAE9001C4CB3 /* IngredientsTableViewCell.swift in Sources */,
 				C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */,
 				C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */,
+				C32038942933E214001C4CB3 /* Double.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

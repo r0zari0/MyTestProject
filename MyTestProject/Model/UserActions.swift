@@ -18,4 +18,3 @@ enum UserActions: String, CaseIterable {
         UIImage(named: self.rawValue)
     }
 }
-

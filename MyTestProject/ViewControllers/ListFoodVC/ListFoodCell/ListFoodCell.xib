@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,18 +42,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWk-W8-9Ek">
+                        <rect key="frame" x="57" y="106" width="264" height="1"/>
+                        <color key="backgroundColor" name="SeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9xg-bJ-FYp"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="V8c-os-7Rp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="59c-0X-NGR"/>
                     <constraint firstItem="V8c-os-7Rp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6ST-mu-aee"/>
+                    <constraint firstItem="NWk-W8-9Ek" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="37" id="9fh-dR-Ivn"/>
                     <constraint firstItem="J0e-kw-vvj" firstAttribute="top" secondItem="sSY-Yd-w2m" secondAttribute="bottom" constant="4" id="Biw-RT-Wyw"/>
                     <constraint firstItem="sSY-Yd-w2m" firstAttribute="leading" secondItem="V8c-os-7Rp" secondAttribute="trailing" constant="8" id="EAa-tL-mrv"/>
                     <constraint firstAttribute="bottom" secondItem="V8c-os-7Rp" secondAttribute="bottom" constant="23" id="JWg-eP-vRk"/>
                     <constraint firstAttribute="bottomMargin" secondItem="23h-Tp-Jgd" secondAttribute="bottom" constant="16" id="KHp-Ap-O9w"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NWk-W8-9Ek" secondAttribute="trailing" constant="37" id="R4V-p0-Xal"/>
                     <constraint firstItem="J0e-kw-vvj" firstAttribute="leading" secondItem="V8c-os-7Rp" secondAttribute="trailing" constant="8" id="Sw7-r3-Vhz"/>
                     <constraint firstAttribute="trailing" secondItem="J0e-kw-vvj" secondAttribute="trailing" constant="16" id="Xrr-Ib-Kqd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="23h-Tp-Jgd" secondAttribute="trailing" constant="16" id="fKD-y3-ZcI"/>
                     <constraint firstItem="23h-Tp-Jgd" firstAttribute="top" secondItem="J0e-kw-vvj" secondAttribute="bottom" constant="8" id="qHI-u1-t8m"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NWk-W8-9Ek" secondAttribute="bottom" id="r09-uO-4Vn"/>
                     <constraint firstItem="23h-Tp-Jgd" firstAttribute="leading" secondItem="V8c-os-7Rp" secondAttribute="trailing" constant="8" id="tqi-zr-NUC"/>
                     <constraint firstAttribute="trailing" secondItem="sSY-Yd-w2m" secondAttribute="trailing" constant="16" id="u3O-vh-IVG"/>
                     <constraint firstItem="sSY-Yd-w2m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="wbq-f4-iFW"/>
@@ -68,4 +79,9 @@
             <point key="canvasLocation" x="175.57251908396947" y="55.633802816901408"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="SeparatorColor">
+            <color red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
