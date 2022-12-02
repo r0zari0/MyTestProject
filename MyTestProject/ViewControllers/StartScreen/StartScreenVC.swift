@@ -7,20 +7,20 @@
 
 import UIKit
 
-//MARK: - StartScreenVC
+// MARK: - StartScreenVC
 
 class StartScreenVC: UIViewController {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private let presenter: StartScreenPresenterProtocol
     private let networking: Networking = Networking()
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(presenter: StartScreenPresenterProtocol) {
         self.presenter = presenter
@@ -31,7 +31,7 @@ class StartScreenVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,7 @@ class StartScreenVC: UIViewController {
     }
 }
 
-
-//MARK: - Private Extension
+    // MARK: - Private Extension
 
 private extension StartScreenVC {
     func setupUI() {

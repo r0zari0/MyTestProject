@@ -7,23 +7,27 @@
 
 import UIKit
 
+// MARK: - IngredientsTableViewCell
 class IngredientsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ingredientImageView: UIImageView!
+    // MARK: - IBOutlets
+    @IBOutlet weak var ingredientImageView: ImageView!
     
     @IBOutlet weak var ingredientNameLabel: UILabel!
     
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupTableViewCell()
+    }
+    
+    private func setupTableViewCell() {
+        ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 2
     }
     
     func config(with ingredient: Ingredient) {
         ingredientNameLabel.text = ingredient.text
-        if let ingredientImage = ingredient.image {
-            ingredient.loadAsyncImage(image: ingredientImage) { image in
-                self.ingredientImageView.image = image
-            }
-        }
+        ingredientImageView.fetchImage(from: ingredient.image!)
     }
     
 }

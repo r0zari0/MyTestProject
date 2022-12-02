@@ -7,27 +7,27 @@
 
 import UIKit
 
-//MARK: - RecipeDetailsVC
+// MARK: - RecipeDetailsVC
 
 class RecipeDetailsVC: UIViewController {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     
-    @IBOutlet weak var ingredientImageView: UIImageView!
+    @IBOutlet private weak var ingredientImageView: UIImageView!
     
-    @IBOutlet weak var caloriesLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var caloriesLabel: UILabel!
+    @IBOutlet private weak var weightLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     
-    @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet private weak var ingredientsTableView: UITableView!
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     var presenter: RecipeDetailsPresenterProtocol
     
     private let cellIdentifier: String = String(describing: "IngredientsTableViewCell")
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(presenter: RecipeDetailsPresenterProtocol) {
         self.presenter = presenter
@@ -38,7 +38,7 @@ class RecipeDetailsVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +54,7 @@ class RecipeDetailsVC: UIViewController {
     
 }
 
+// MARK: - Extension
 extension RecipeDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.recipe.ingredients.count
@@ -72,7 +73,9 @@ extension RecipeDetailsVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension RecipeDetailsVC {
-    func setupUI() {
+   private func setupUI() {
+       ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 8
+       
          presenter.getImage(closure: { image in
              self.ingredientImageView.image = image
         })

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//MARK: - Protocol
+// MARK: - Protocol
 
 protocol ListFoodPresenterProtocol {
     var foodRecipes: [Hit] { get }
@@ -16,26 +16,29 @@ protocol ListFoodPresenterProtocol {
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController)
 }
 
-//MARK: - ListFoodPresenter
+// MARK: - ListFoodPresenter
 
 class ListFoodPresenter: ListFoodPresenterProtocol {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
-    let navigator: NavigatorProtocol
-    let networking: NetworkingProtocol
-    let type: UserActions
+    private let navigator: NavigatorProtocol
+    private let networking: NetworkingProtocol
+    private let type: RecipeType
+    
     var foodRecipes: [Hit] = []
     weak var view: ListFoodVCProtocol?
     
-    //MARK: - Init
+    // MARK: - Init
     
-    init(navigator: NavigatorProtocol, networking: NetworkingProtocol, type: UserActions) {
+    init(navigator: NavigatorProtocol, networking: NetworkingProtocol, type: RecipeType) {
         self.navigator = navigator
         self.networking = networking
         self.type = type
     }
 }
+
+// MARK: - Extension
 
 extension ListFoodPresenter {
     func getRecipes() {

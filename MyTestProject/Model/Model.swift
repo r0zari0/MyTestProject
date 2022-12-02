@@ -33,6 +33,7 @@ struct Ingredient: Decodable {
 }
 
 extension Decodable {
+    
     func loadAsyncImage(image: String, closure: @escaping (UIImage) -> ()) {
         DispatchQueue.global().async {
             guard let url = URL(string: image) else { return }

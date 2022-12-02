@@ -7,33 +7,25 @@
 
 import Foundation
 import UIKit
+ 
+    // MARK: - Protocol
 
 protocol NetworkingProtocol {
-    func getModel(type: UserActions, closure: @escaping ([Hit]) -> ())
+    func getModel(type: RecipeType, closure: @escaping ([Hit]) -> ())
     
 }
 
+    // MARK: - Networking
+
 class Networking: NetworkingProtocol {
-    func getModel(type: UserActions, closure: @escaping ([Hit]) -> ()) {
-        
-        let foodType: String
-        switch type {
-        case .meat:
-            foodType = "meat"
-        case .fish:
-            foodType = "fish"
-        case .chicken:
-            foodType = "chicken"
-        case .milk:
-            foodType = "milk"
-        }
+    func getModel(type: RecipeType, closure: @escaping ([Hit]) -> ()) {
         
         let headers = [
             "X-RapidAPI-Key": "d48b37f797msh914f92f5efbf2b8p18795ejsn2d67a777e5d2",
             "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodType)")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(type.partURL)")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -63,5 +55,36 @@ class Networking: NetworkingProtocol {
                 print(error)
             }
         }.resume()
+    }
+    
+   static func loadAsyncImage(url: URL, closure: @escaping (Data, URLResponse) -> ()) {
+       
+       URLSession.shared.dataTask(with: url) { data, response, error in
+           if let error = error {
+               print(error)
+               
+               return
+           }
+           
+           guard let data = data, let response = response else {
+               
+               return
+           }
+           
+           guard let responseURL = response.url else {
+               return
+           }
+           guard url == responseURL else { return }
+           
+           closure(data, response)
+       }
+//        DispatchQueue.global().async {
+//            guard let data = try? Data(contentsOf: url) else { return }
+//            guard let image = UIImage(data: data) else { return }
+//
+//            DispatchQueue.main.async {
+//                closure(image)
+//            }
+//        }
     }
 }

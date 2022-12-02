@@ -7,26 +7,26 @@
 
 import UIKit
 
-//MARK: -
+// MARK: - Protocol
 protocol ListFoodVCProtocol: AnyObject {
     func reload()
 }
 
-//MARK: - ListFoodVC
+// MARK: - ListFoodVC
 
 class ListFoodVC: UIViewController {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: - Properties
+    // MARK: - Properties
     
-    let presenter: ListFoodPresenterProtocol
+    private let presenter: ListFoodPresenterProtocol
     
     private let cellIdentifier: String = String(describing: "ListFoodCell")
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(presenter: ListFoodPresenterProtocol) {
         self.presenter = presenter
@@ -37,7 +37,7 @@ class ListFoodVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ListFoodVC: UIViewController {
     
 }
 
-//MARK: - Extension
+    // MARK: - Extension
 extension ListFoodVC {
     func setupUI() {
         setupTableView()

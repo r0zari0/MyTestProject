@@ -7,19 +7,19 @@
 
 import UIKit
 
-//MARK: - Extension
+// MARK: - Extension
 
 class ListFoodCell: UITableViewCell {
-
-    //MARK: - IBOutlets
     
-    @IBOutlet weak var recipeImage: UIImageView!
+    // MARK: - IBOutlets
     
-    @IBOutlet weak var recipeAuthorLabel: UILabel!
-    @IBOutlet weak var recipeDescriptionLabel: UILabel!
-    @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet private weak var recipeImage: ImageView!
     
-    //MARK: - Life Cycle
+    @IBOutlet private weak var recipeAuthorLabel: UILabel!
+    @IBOutlet private weak var recipeDescriptionLabel: UILabel!
+    @IBOutlet private weak var recipeNameLabel: UILabel!
+    
+    // MARK: - Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,7 @@ class ListFoodCell: UITableViewCell {
     }
 }
 
-//MARK: - Extension
+// MARK: - Extension
 
 extension ListFoodCell {
     private func setupTableViewCell() {
@@ -37,7 +37,7 @@ extension ListFoodCell {
         recipeDescriptionLabel.textColor = .white
     }
     
-    func config(with recipe: Recipe) {
+     func config(with recipe: Recipe) {
         recipe.loadAsyncImage(image: recipe.image, closure: { image in
             self.recipeImage.image = image
         })

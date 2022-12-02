@@ -7,31 +7,31 @@
 
 import UIKit
 
-//MARK: - UserActionCell
+// MARK: - UserActionCell
 
 class UserActionCell: UICollectionViewCell {
     
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak private var foodLabel: UILabel!
     @IBOutlet weak private var foodImageView: UIImageView!
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     
-    //MARK: - Func
+    // MARK: - Func
     
-    func config(with title: String, type: UserActions) {
+    func config(with title: String, type: RecipeType) {
         foodLabel.text = title
         foodImageView.image = type.image
     }
 }
 
-//MARK: - Extension
+// MARK: - Extension
 
 extension UserActionCell {
     func setupUI() {

@@ -8,23 +8,23 @@
 import Foundation
 import UIKit
 
-//MARK: - Protocol
+// MARK: - Protocol
 
 protocol StartScreenPresenterProtocol {
-    var userActions: [UserActions] { get }
+    var userActions: [RecipeType] { get }
     func showListFoodVC(indexPath: Int, view: UIViewController)
 }
 
-//MARK: - StartScreenPresenter
+// MARK: - StartScreenPresenter
 
 class StartScreenPresenter {
-    let userActions = UserActions.allCases
+    let userActions = RecipeType.allCases
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private let navigator: NavigatorProtocol
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
@@ -32,7 +32,7 @@ class StartScreenPresenter {
     
 }
 
-//MARK: - Extension
+    // MARK: - Extension
 
 extension StartScreenPresenter: StartScreenPresenterProtocol {
     func showListFoodVC(indexPath: Int, view: UIViewController) {
