@@ -13,7 +13,7 @@ class RecipeDetailsVC: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var ingredientImageView: UIImageView!
+    @IBOutlet private weak var ingredientImageView: ImageView!
     
     @IBOutlet private weak var caloriesLabel: UILabel!
     @IBOutlet private weak var weightLabel: UILabel!
@@ -76,9 +76,11 @@ extension RecipeDetailsVC {
    private func setupUI() {
        ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 8
        
-         presenter.getImage(closure: { image in
-             self.ingredientImageView.image = image
-        })
+       ingredientImageView.fetchImage(from: presenter.recipe.image)
+//         presenter.getImage(closure: { image in
+//             self.ingredientImageView.image = image
+//        })
+       
         navigationItem.largeTitleDisplayMode = .never
         
         caloriesLabel.text = "Calories: \(Int(presenter.recipe.calories)) cal"

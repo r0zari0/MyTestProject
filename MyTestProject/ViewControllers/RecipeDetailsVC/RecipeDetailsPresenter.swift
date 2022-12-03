@@ -30,8 +30,11 @@ class RecipeDetailsPresenter {
 // MARK: - Extension
 extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     func getImage(closure: @escaping (UIImage) -> ()) {
-        recipe.loadAsyncImage(image: recipe.image) { image in
-            closure(image)
-        }
+//        recipe.loadAsyncImage(image: recipe.image) { image in
+//            closure(image)
+//        }
+//        Networking.loadAsyncImage(url: recipe.image) { <#Data#>, <#URLResponse#> in
+//            <#code#>
+//        }
     }
 }

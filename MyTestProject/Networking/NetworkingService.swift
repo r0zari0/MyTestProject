@@ -78,13 +78,5 @@ class Networking: NetworkingProtocol {
            
            closure(data, response)
        }
-//        DispatchQueue.global().async {
-//            guard let data = try? Data(contentsOf: url) else { return }
-//            guard let image = UIImage(data: data) else { return }
-//
-//            DispatchQueue.main.async {
-//                closure(image)
-//            }
-//        }
     }
 }

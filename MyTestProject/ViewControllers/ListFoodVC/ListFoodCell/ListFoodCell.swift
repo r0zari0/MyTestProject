@@ -38,9 +38,10 @@ extension ListFoodCell {
     }
     
      func config(with recipe: Recipe) {
-        recipe.loadAsyncImage(image: recipe.image, closure: { image in
-            self.recipeImage.image = image
-        })
+         recipeImage.fetchImage(from: recipe.image)
+//        recipe.loadAsyncImage(image: recipe.image, closure: { image in
+//            self.recipeImage.image = image
+//        })
         recipeNameLabel.text = recipe.label
         recipeDescriptionLabel.text = recipe.source
         recipeAuthorLabel.text = "Author: \(recipe.source)"
