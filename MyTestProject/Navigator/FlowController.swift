@@ -33,8 +33,8 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
 
 extension FlowController {
     func instantiateStartVC() -> UINavigationController {
-        let presenter = StartScreenPresenter(navigator: navigator)
-        let vc = StartScreenVC(presenter: presenter)
+        let presenter = FoodCollectionViewPresenter(navigator: navigator)
+        let vc = FoodCollectionViewVC(presenter: presenter)
         let navigationVC = UINavigationController(rootViewController: vc)
         vc.tabBarItem = UITabBarItem(
             title: "Recipies", image: UIImage(systemName: "book.fill"), selectedImage: UIImage(systemName: "book.fill")

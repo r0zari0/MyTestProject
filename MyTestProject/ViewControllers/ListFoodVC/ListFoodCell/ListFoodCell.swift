@@ -31,6 +31,7 @@ class ListFoodCell: UITableViewCell {
 
 extension ListFoodCell {
     private func setupTableViewCell() {
+        selectionStyle = .none
         recipeImage.layer.cornerRadius = recipeImage.bounds.width / 2
         recipeAuthorLabel.textColor = .white
         recipeNameLabel.textColor = .white

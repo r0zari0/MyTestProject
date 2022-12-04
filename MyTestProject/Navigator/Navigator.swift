@@ -33,4 +33,9 @@ class Navigator: NavigatorProtocol {
         let vc = assembler.createRecipeDetailsVC(networking: networking, recipe: recipe)
         view.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func showStartVC() -> UIViewController {
+        let vc = assembler.createStartVC(navigator: self)
+        return vc
+    }
 }

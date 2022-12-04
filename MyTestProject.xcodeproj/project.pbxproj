@@ -12,11 +12,11 @@
 		C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */; };
 		C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C320384D291C392D001C4CB3 /* Assets.xcassets */; };
 		C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C320384F291C392D001C4CB3 /* LaunchScreen.storyboard */; };
-		C320385C291C3A3C001C4CB3 /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320385A291C3A3C001C4CB3 /* StartScreenVC.swift */; };
+		C320385C291C3A3C001C4CB3 /* FoodCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320385A291C3A3C001C4CB3 /* FoodCollectionViewVC.swift */; };
 		C320385D291C3A3C001C4CB3 /* StartScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C320385B291C3A3C001C4CB3 /* StartScreenVC.xib */; };
 		C3203860291C3A6F001C4CB3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320385F291C3A6F001C4CB3 /* Assembler.swift */; };
 		C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203861291C3A7C001C4CB3 /* Navigator.swift */; };
-		C3203864291C3B15001C4CB3 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203863291C3B15001C4CB3 /* StartScreenPresenter.swift */; };
+		C3203864291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203863291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift */; };
 		C3203868291C441F001C4CB3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203867291C441F001C4CB3 /* Model.swift */; };
 		C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386B291C7AA4001C4CB3 /* FlowController.swift */; };
 		C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */; };
@@ -38,6 +38,9 @@
 		C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038952937403A001C4CB3 /* UINavBarAppearance.swift */; };
 		C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320389729374092001C4CB3 /* View+ActivityIndicator.swift */; };
 		C3894ED02938866A008057B7 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ECF2938866A008057B7 /* ImageView.swift */; };
+		C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED1293B44B9008057B7 /* StartVC.swift */; };
+		C3894ED4293B44B9008057B7 /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3894ED2293B44B9008057B7 /* StartVC.xib */; };
+		C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED6293BC4D3008057B7 /* StartPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,11 +51,11 @@
 		C320384D291C392D001C4CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3203850291C392D001C4CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3203852291C392D001C4CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C320385A291C3A3C001C4CB3 /* StartScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
+		C320385A291C3A3C001C4CB3 /* FoodCollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewVC.swift; sourceTree = "<group>"; };
 		C320385B291C3A3C001C4CB3 /* StartScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartScreenVC.xib; sourceTree = "<group>"; };
 		C320385F291C3A6F001C4CB3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		C3203861291C3A7C001C4CB3 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		C3203863291C3B15001C4CB3 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
+		C3203863291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewPresenter.swift; sourceTree = "<group>"; };
 		C3203867291C441F001C4CB3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C320386B291C7AA4001C4CB3 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		C320386E291C7FC0001C4CB3 /* UIViewController + Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Child.swift"; sourceTree = "<group>"; };
@@ -74,6 +77,9 @@
 		C32038952937403A001C4CB3 /* UINavBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavBarAppearance.swift; sourceTree = "<group>"; };
 		C320389729374092001C4CB3 /* View+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		C3894ECF2938866A008057B7 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		C3894ED1293B44B9008057B7 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		C3894ED2293B44B9008057B7 /* StartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
+		C3894ED6293BC4D3008057B7 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,15 +135,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		C3203859291C3A02001C4CB3 /* StartScreen */ = {
+		C3203859291C3A02001C4CB3 /* FoodCollectionViewVC */ = {
 			isa = PBXGroup;
 			children = (
 				C3203875291FFFDF001C4CB3 /* FoodCell */,
-				C320385A291C3A3C001C4CB3 /* StartScreenVC.swift */,
+				C320385A291C3A3C001C4CB3 /* FoodCollectionViewVC.swift */,
 				C320385B291C3A3C001C4CB3 /* StartScreenVC.xib */,
-				C3203863291C3B15001C4CB3 /* StartScreenPresenter.swift */,
+				C3203863291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift */,
 			);
-			path = StartScreen;
+			path = FoodCollectionViewVC;
 			sourceTree = "<group>";
 		};
 		C320385E291C3A54001C4CB3 /* Navigator */ = {
@@ -191,9 +197,10 @@
 		C320387A292408D1001C4CB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3894ED5293BC4AA008057B7 /* StartVC */,
 				C320388729277309001C4CB3 /* RecipeDetailsVC */,
 				C320387B292408E6001C4CB3 /* ListFoodVC */,
-				C3203859291C3A02001C4CB3 /* StartScreen */,
+				C3203859291C3A02001C4CB3 /* FoodCollectionViewVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +243,16 @@
 				C32038902931DAE9001C4CB3 /* IngredientsTableViewCell.xib */,
 			);
 			path = IngredientsCell;
+			sourceTree = "<group>";
+		};
+		C3894ED5293BC4AA008057B7 /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3894ED1293B44B9008057B7 /* StartVC.swift */,
+				C3894ED2293B44B9008057B7 /* StartVC.xib */,
+				C3894ED6293BC4D3008057B7 /* StartPresenter.swift */,
+			);
+			path = StartVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +320,7 @@
 				C32038922931DAE9001C4CB3 /* IngredientsTableViewCell.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
 				C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */,
+				C3894ED4293B44B9008057B7 /* StartVC.xib in Resources */,
 				C320385D291C3A3C001C4CB3 /* StartScreenVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,13 +337,14 @@
 				C3203872291C866A001C4CB3 /* NetworkingService.swift in Sources */,
 				C320387829200077001C4CB3 /* UserActionCell.swift in Sources */,
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
-				C320385C291C3A3C001C4CB3 /* StartScreenVC.swift in Sources */,
+				C320385C291C3A3C001C4CB3 /* FoodCollectionViewVC.swift in Sources */,
 				C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */,
 				C3203874291DBD44001C4CB3 /* RecipeType.swift in Sources */,
 				C3203860291C3A6F001C4CB3 /* Assembler.swift in Sources */,
 				C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */,
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,
-				C3203864291C3B15001C4CB3 /* StartScreenPresenter.swift in Sources */,
+				C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */,
+				C3203864291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift in Sources */,
 				C3894ED02938866A008057B7 /* ImageView.swift in Sources */,
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
 				C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */,
@@ -337,6 +356,7 @@
 				C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */,
 				C32038942933E214001C4CB3 /* Double.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
+				C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - StartScreenVC
 
-class StartScreenVC: UIViewController {
+class FoodCollectionViewVC: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -17,12 +17,12 @@ class StartScreenVC: UIViewController {
     
     // MARK: - Properties
     
-    private let presenter: StartScreenPresenterProtocol
+    private let presenter: FoodCollectionViewPresenterProtocol
     private let networking: Networking = Networking()
     
     // MARK: - Init
     
-    init(presenter: StartScreenPresenterProtocol) {
+    init(presenter: FoodCollectionViewPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,7 +41,7 @@ class StartScreenVC: UIViewController {
 
     // MARK: - Private Extension
 
-private extension StartScreenVC {
+private extension FoodCollectionViewVC {
     func setupUI() {
         setupCollectionView()
         setupNavigationController()
@@ -62,7 +62,7 @@ private extension StartScreenVC {
     }
 }
 
-extension StartScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
+extension FoodCollectionViewVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter.showListFoodVC(indexPath: indexPath.item, view: self)
     }
@@ -82,7 +82,7 @@ extension StartScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
-extension StartScreenVC: UICollectionViewDelegateFlowLayout {
+extension FoodCollectionViewVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 32, height: 150
         )

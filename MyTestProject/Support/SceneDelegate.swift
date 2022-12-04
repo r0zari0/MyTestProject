@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigator = Navigator()
-        let vc:FlowController = FlowController(navigator: navigator)
+        
+        let presenter = StartPresenter(navigator: navigator)
+        let vc: StartVC = StartVC(presenter: presenter)
+//        let vc:FlowController = FlowController(navigator: navigator)
         
         window?.rootViewController = vc
         window?.makeKeyAndVisible()

@@ -22,6 +22,7 @@ class IngredientsTableViewCell: UITableViewCell {
     }
     
     private func setupTableViewCell() {
+        selectionStyle = .none
         ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 2
     }
     

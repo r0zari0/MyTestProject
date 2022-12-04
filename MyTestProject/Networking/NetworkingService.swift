@@ -62,21 +62,20 @@ class Networking: NetworkingProtocol {
        URLSession.shared.dataTask(with: url) { data, response, error in
            if let error = error {
                print(error)
-               
                return
            }
            
            guard let data = data, let response = response else {
-               
                return
            }
            
            guard let responseURL = response.url else {
                return
            }
+           
            guard url == responseURL else { return }
            
            closure(data, response)
-       }
+       }.resume()
     }
 }

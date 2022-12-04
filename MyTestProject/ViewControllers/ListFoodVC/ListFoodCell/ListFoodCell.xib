@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-os-7Rp">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-os-7Rp" customClass="ImageView" customModule="MyTestProject" customModuleProvider="target">
                         <rect key="frame" x="16" y="23" width="72" height="72"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="72" id="ixY-xL-gGN"/>

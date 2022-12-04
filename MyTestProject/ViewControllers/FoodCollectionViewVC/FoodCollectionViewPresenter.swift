@@ -10,14 +10,14 @@ import UIKit
 
 // MARK: - Protocol
 
-protocol StartScreenPresenterProtocol {
+protocol FoodCollectionViewPresenterProtocol {
     var userActions: [RecipeType] { get }
     func showListFoodVC(indexPath: Int, view: UIViewController)
 }
 
 // MARK: - StartScreenPresenter
 
-class StartScreenPresenter {
+class FoodCollectionViewPresenter {
     let userActions = RecipeType.allCases
     
     // MARK: - Properties
@@ -34,7 +34,7 @@ class StartScreenPresenter {
 
     // MARK: - Extension
 
-extension StartScreenPresenter: StartScreenPresenterProtocol {
+extension FoodCollectionViewPresenter: FoodCollectionViewPresenterProtocol {
     func showListFoodVC(indexPath: Int, view: UIViewController) {
         let userAction = userActions[indexPath]
         navigator.showListFoodVC(view: view, type: userAction)
