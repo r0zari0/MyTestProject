@@ -12,7 +12,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="IngredientsTableViewCell" customModule="MyTestProject" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -31,7 +31,6 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="96W-tt-gBB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GHH-S9-kI9"/>
                     <constraint firstItem="TyW-un-YCc" firstAttribute="leading" secondItem="96W-tt-gBB" secondAttribute="trailing" constant="8" id="OiQ-AG-tJd"/>
                     <constraint firstAttribute="bottom" secondItem="96W-tt-gBB" secondAttribute="bottom" constant="10" id="cbf-X5-YB2"/>
                     <constraint firstAttribute="trailing" secondItem="TyW-un-YCc" secondAttribute="trailing" constant="16" id="iXH-JE-kGQ"/>

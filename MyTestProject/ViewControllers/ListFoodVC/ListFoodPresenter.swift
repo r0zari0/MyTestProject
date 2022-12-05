@@ -12,6 +12,7 @@ import UIKit
 
 protocol ListFoodPresenterProtocol {
     var foodRecipes: [Hit] { get }
+    
     func getRecipes()
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController)
 }

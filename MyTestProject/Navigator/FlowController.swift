@@ -28,6 +28,11 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        setupTabBar()
+    }
+    
+    private func setupTabBar() {
+        UITabBar.appearance().tintColor = .white 
     }
 }
 

@@ -23,7 +23,7 @@ class RecipeDetailsVC: UIViewController {
     
     // MARK: - Properties
     
-    var presenter: RecipeDetailsPresenterProtocol
+  private let presenter: RecipeDetailsPresenterProtocol
     
     private let cellIdentifier: String = String(describing: "IngredientsTableViewCell")
     

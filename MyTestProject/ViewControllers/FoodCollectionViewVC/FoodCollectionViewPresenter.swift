@@ -18,10 +18,10 @@ protocol FoodCollectionViewPresenterProtocol {
 // MARK: - StartScreenPresenter
 
 class FoodCollectionViewPresenter {
-    let userActions = RecipeType.allCases
     
     // MARK: - Properties
     
+    let userActions = RecipeType.allCases
     private let navigator: NavigatorProtocol
     
     // MARK: - Init
@@ -29,7 +29,6 @@ class FoodCollectionViewPresenter {
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
     }
-    
 }
 
     // MARK: - Extension

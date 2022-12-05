@@ -9,12 +9,15 @@ import Foundation
 import UIKit
 
   // MARK: - Protocol
+
 protocol RecipeDetailsPresenterProtocol {
     var recipe: Recipe { get }
+    
     func getImage(closure: @escaping (UIImage) -> ())
 }
  
 // MARK: - RecipeDetailsPresenter
+
 class RecipeDetailsPresenter {
     let networking: NetworkingProtocol
     

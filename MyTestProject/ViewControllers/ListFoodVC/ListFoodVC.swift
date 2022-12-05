@@ -8,6 +8,7 @@
 import UIKit
 
 // MARK: - Protocol
+
 protocol ListFoodVCProtocol: AnyObject {
     func reload()
 }
