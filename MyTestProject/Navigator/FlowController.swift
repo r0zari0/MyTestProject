@@ -11,7 +11,7 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
     
     private var embedTabBarVC: UITabBarController = UITabBarController()
     
-    private lazy var startVC: UINavigationController = instantiateStartVC()
+    private lazy var startVC: UIViewController = instantiateStartVC()
     
     let navigator: NavigatorProtocol
     
@@ -37,7 +37,7 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
 }
 
 extension FlowController {
-    func instantiateStartVC() -> UINavigationController {
+    func instantiateStartVC() -> UIViewController {
         let presenter = FoodCollectionViewPresenter(navigator: navigator)
         let vc = FoodCollectionViewVC(presenter: presenter)
         let navigationVC = UINavigationController(rootViewController: vc)

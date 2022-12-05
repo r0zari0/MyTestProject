@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Protocol
 
 protocol FoodCollectionViewPresenterProtocol {
-    var userActions: [RecipeType] { get }
+    var recipeTypes: [RecipeType] { get }
     func showListFoodVC(indexPath: Int, view: UIViewController)
 }
 
@@ -21,7 +21,7 @@ class FoodCollectionViewPresenter {
     
     // MARK: - Properties
     
-    let userActions = RecipeType.allCases
+    let recipeTypes = RecipeType.allCases
     private let navigator: NavigatorProtocol
     
     // MARK: - Init
@@ -35,7 +35,7 @@ class FoodCollectionViewPresenter {
 
 extension FoodCollectionViewPresenter: FoodCollectionViewPresenterProtocol {
     func showListFoodVC(indexPath: Int, view: UIViewController) {
-        let userAction = userActions[indexPath]
+        let userAction = recipeTypes[indexPath]
         navigator.showListFoodVC(view: view, type: userAction)
     }
 }

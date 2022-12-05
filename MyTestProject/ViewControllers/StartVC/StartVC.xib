@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-2n-k5j">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeT-sn-KRk">
                     <rect key="frame" x="16" y="718" width="361" height="44"/>
@@ -38,6 +37,9 @@
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" name="buttonColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="showTabBarButton" destination="-1" eventType="touchUpInside" id="dq1-nO-MdQ"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-fM-Aev">
                     <rect key="frame" x="16" y="643" width="361" height="59"/>
@@ -72,7 +74,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JKe-2n-k5j" secondAttribute="bottom" id="2Dn-Ci-xOc"/>
+                <constraint firstAttribute="bottom" secondItem="JKe-2n-k5j" secondAttribute="bottom" id="2Dn-Ci-xOc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UuI-fA-fdJ" secondAttribute="trailing" constant="16" id="6GF-jo-X2x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JKe-2n-k5j" secondAttribute="trailing" id="IVZ-dN-BSa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IgJ-fM-Aev" secondAttribute="trailing" constant="16" id="Mzv-92-Z55"/>
@@ -84,7 +86,7 @@
                 <constraint firstItem="UuI-fA-fdJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ky0-B5-8EB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eeT-sn-KRk" secondAttribute="bottom" constant="56" id="oRH-hS-tYl"/>
                 <constraint firstItem="IgJ-fM-Aev" firstAttribute="top" secondItem="UuI-fA-fdJ" secondAttribute="bottom" constant="8" id="ofY-JZ-gbq"/>
-                <constraint firstItem="JKe-2n-k5j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="r6C-dA-XzT"/>
+                <constraint firstItem="JKe-2n-k5j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r6C-dA-XzT"/>
             </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
         </view>

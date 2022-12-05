@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let presenter = StartPresenter(navigator: navigator)
         let vc: StartVC = StartVC(presenter: presenter)
-//        let vc:FlowController = FlowController(navigator: navigator)
+//       let vc:FlowController = FlowController(navigator: navigator)
         
-        window?.rootViewController = vc
+        window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .dark
         

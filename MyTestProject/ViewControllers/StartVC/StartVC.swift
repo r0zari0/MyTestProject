@@ -41,7 +41,13 @@ class StartVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBAction func showTabBarButton() {
+        presenter.showFoodCollectionViewVC(view: self)
+    }
+    
     func setupUI() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         firstLabel.text = "Wellcome !"
         secondLabel.text = "Looking for a great home-cooked meal?"
         thirdLabel.text = "Log in these app, and you'll be cooking it up in no time"

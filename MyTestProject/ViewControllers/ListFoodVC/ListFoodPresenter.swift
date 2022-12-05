@@ -43,9 +43,11 @@ class ListFoodPresenter: ListFoodPresenterProtocol {
 
 extension ListFoodPresenter {
     func getRecipes() {
+        view?.setupTitle(title: type.rawValue + " recipies")
         networking.getModel(type: type) { hit in
             self.foodRecipes = hit
             self.view?.reload()
+            
         }
     }
     

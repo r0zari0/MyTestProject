@@ -9,9 +9,8 @@ import Foundation
 import UIKit
 
 class Assembler {
-    func createStartScreenVC(navigator: NavigatorProtocol) -> UIViewController {
-        let presenter = FoodCollectionViewPresenter(navigator: navigator)
-        let vc = FoodCollectionViewVC(presenter: presenter)
+    func createMainVC(navigator: NavigatorProtocol) -> UIViewController {
+        let vc = FlowController(navigator: navigator)
         return vc
     }
     

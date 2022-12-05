@@ -11,6 +11,7 @@ import UIKit
 
 protocol ListFoodVCProtocol: AnyObject {
     func reload()
+    func setupTitle(title: String)
 }
 
 // MARK: - ListFoodVC
@@ -82,6 +83,10 @@ extension ListFoodVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ListFoodVC: ListFoodVCProtocol {
+    func setupTitle(title: String) {
+        navigationItem.title = title
+    }
+    
     func reload() {
         tableView.reloadData()
     }

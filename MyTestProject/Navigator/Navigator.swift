@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 protocol NavigatorProtocol {
-    func showStartScreenVC() -> UIViewController
+    func showStartScreenVC(view: UIViewController)
     func showListFoodVC(view: UIViewController, type: RecipeType)
     func showRecipeDetailVC(view: UIViewController, recipe: Recipe)
+    func showStartVC() -> UIViewController
 }
 
 class Navigator: NavigatorProtocol {
@@ -19,10 +20,9 @@ class Navigator: NavigatorProtocol {
     private let assembler = Assembler()
     private let networking = Networking()
     
-    func showStartScreenVC() -> UIViewController {
-        let vc = assembler.createStartScreenVC(navigator: self)
-        return vc
-    }
+    func showStartScreenVC(view: UIViewController) {
+        let vc = assembler.createMainVC(navigator: self)
+        view.navigationController?.pushViewController(vc, animated: true)    }
     
     func showListFoodVC(view: UIViewController, type: RecipeType) {
         let vc = assembler.createListFoodVC(navigator: self, networking: networking, type: type)

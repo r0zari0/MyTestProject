@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Protocol
 
 protocol StartPresenterProtocol {
-    
+    func showFoodCollectionViewVC(view: UIViewController)
 }
 
 // MARK: - StartVC
@@ -27,6 +27,7 @@ class StartPresenter: StartPresenterProtocol {
     }
     
     func showFoodCollectionViewVC(view: UIViewController) {
-    
+        navigator.showStartScreenVC(view: view)
+        
     }
 }

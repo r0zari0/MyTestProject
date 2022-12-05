@@ -68,13 +68,13 @@ extension FoodCollectionViewVC: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter.userActions.count
+        presenter.recipeTypes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: UserActionCell.self), for: indexPath) as! UserActionCell
         
-        let userAction = presenter.userActions[indexPath.item]
+        let userAction = presenter.recipeTypes[indexPath.item]
         
         cell.config(with: userAction.rawValue, type: userAction)
         
