@@ -29,10 +29,15 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
         super.viewDidLoad()
         initialSetup()
         setupTabBar()
+        setUIAppearanceCustomNavBar(type: .opaque)
     }
     
-    private func setupTabBar() {
-        UITabBar.appearance().tintColor = .white 
+    func setupTabBar() {
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = .black
+        UITabBar.appearance().tintColor = .white
     }
 }
 

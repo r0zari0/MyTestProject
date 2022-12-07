@@ -13,8 +13,8 @@ class UserActionCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak private var foodLabel: UILabel!
-    @IBOutlet weak private var foodImageView: UIImageView!
+    @IBOutlet private weak var foodLabel: UILabel!
+    @IBOutlet private weak var foodImageView: UIImageView!
     
     // MARK: - Life Cycle
     

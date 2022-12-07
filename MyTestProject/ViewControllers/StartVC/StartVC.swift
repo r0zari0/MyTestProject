@@ -13,13 +13,16 @@ class StartVC: UIViewController {
 
     // MARK: - Life Cycle
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cookBookLabel: UILabel!
-    @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet weak var thirdLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
     
-    @IBOutlet weak var showSecondScreen: UIButton!
+    @IBOutlet private weak var cookBookLabel: UILabel!
+    @IBOutlet private weak var firstLabel: UILabel!
+    @IBOutlet private weak var secondLabel: UILabel!
+    @IBOutlet private weak var thirdLabel: UILabel!
+    
+    @IBOutlet private weak var showSecondScreen: UIButton!
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +44,6 @@ class StartVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBAction func showTabBarButton() {
-        presenter.showFoodCollectionViewVC(view: self)
-    }
-    
     func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
@@ -54,5 +53,13 @@ class StartVC: UIViewController {
         cookBookLabel.text = "Cook Book"
         
         imageView.image = UIImage(named: "startScreenImage")
+    }
+}
+
+// MARK: - IBActions
+
+extension StartVC {
+    @IBAction func showTabBarButton() {
+        presenter.showFoodCollectionViewVC(view: self)
     }
 }

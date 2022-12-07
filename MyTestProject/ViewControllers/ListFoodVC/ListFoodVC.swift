@@ -20,7 +20,7 @@ class ListFoodVC: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     
@@ -44,19 +44,23 @@ class ListFoodVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        presenter.getRecipes()
+        view.showActivityIndicator()
     }
     
 }
 
     // MARK: - Extension
-extension ListFoodVC {
+
+private extension ListFoodVC {
     func setupUI() {
         setupTableView()
+        presenter.getRecipes()
         navigationItem.largeTitleDisplayMode = .never
     }
     
     func setupTableView() {
+        tableView.layer.opacity = 0
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(.init(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -89,6 +93,11 @@ extension ListFoodVC: ListFoodVCProtocol {
     
     func reload() {
         tableView.reloadData()
+        view.hideActivityIndicatorView()
+        
+        UIView.animate(withDuration: 3) {
+            self.tableView.layer.opacity = 1
+        }
     }
 }
 

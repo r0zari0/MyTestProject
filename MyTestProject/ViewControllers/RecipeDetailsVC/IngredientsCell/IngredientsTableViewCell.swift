@@ -13,9 +13,9 @@ class IngredientsTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var ingredientImageView: ImageView!
+    @IBOutlet private weak var ingredientImageView: ImageView!
     
-    @IBOutlet weak var ingredientNameLabel: UILabel!
+    @IBOutlet private weak var ingredientNameLabel: UILabel!
     
     // MARK: - Life Cycle
     

@@ -13,7 +13,7 @@ class FoodCollectionViewVC: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
     
@@ -45,7 +45,6 @@ private extension FoodCollectionViewVC {
     func setupUI() {
         setupCollectionView()
         setupNavigationController()
-        
     }
     
     func setupNavigationController() {

@@ -18,16 +18,21 @@ protocol StartPresenterProtocol {
 
 class StartPresenter: StartPresenterProtocol {
     
+    // MARK: - Properties
+    
     let navigator: NavigatorProtocol
-     
-// MARK: - Init
+    
+    // MARK: - Init
     
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
     }
-    
+}
+
+// MARK: - Extension
+
+extension StartPresenter {
     func showFoodCollectionViewVC(view: UIViewController) {
         navigator.showStartScreenVC(view: view)
-        
     }
 }
