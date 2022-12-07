@@ -10,9 +10,9 @@ import UIKit
 // MARK: - StartVC
 
 class StartVC: UIViewController {
-
+    
     // MARK: - Life Cycle
-
+    
     @IBOutlet private weak var imageView: UIImageView!
     
     @IBOutlet private weak var cookBookLabel: UILabel!
@@ -29,7 +29,7 @@ class StartVC: UIViewController {
         setupUI()
     }
     
-      // MARK: - Properties
+    // MARK: - Properties
     
     let presenter: StartPresenterProtocol
     

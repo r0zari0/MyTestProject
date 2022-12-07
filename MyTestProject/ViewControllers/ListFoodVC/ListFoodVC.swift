@@ -43,6 +43,7 @@ class ListFoodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.tabBarController?.tabBar.isHidden = true пропадает на всех экранах 
         setupUI()
         view.showActivityIndicator()
     }

@@ -33,6 +33,6 @@ class StartPresenter: StartPresenterProtocol {
 
 extension StartPresenter {
     func showFoodCollectionViewVC(view: UIViewController) {
-        navigator.showStartScreenVC(view: view)
+        navigator.showFoodCollectionViewVC(view: view)
     }
 }

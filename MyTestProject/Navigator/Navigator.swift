@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol NavigatorProtocol {
-    func showStartScreenVC(view: UIViewController)
+    func showFoodCollectionViewVC(view: UIViewController)
     func showListFoodVC(view: UIViewController, type: RecipeType)
     func showRecipeDetailVC(view: UIViewController, recipe: Recipe)
     func showStartVC() -> UIViewController
@@ -20,9 +20,12 @@ class Navigator: NavigatorProtocol {
     private let assembler = Assembler()
     private let networking = Networking()
     
-    func showStartScreenVC(view: UIViewController) {
+    func showFoodCollectionViewVC(view: UIViewController) {
         let vc = assembler.createMainVC(navigator: self)
-        view.navigationController?.pushViewController(vc, animated: true)    }
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        view.navigationController?.present(vc, animated: true)
+    }
     
     func showListFoodVC(view: UIViewController, type: RecipeType) {
         let vc = assembler.createListFoodVC(navigator: self, networking: networking, type: type)
@@ -39,3 +42,4 @@ class Navigator: NavigatorProtocol {
         return vc
     }
 }
+
