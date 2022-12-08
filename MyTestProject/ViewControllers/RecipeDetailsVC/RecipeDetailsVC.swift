@@ -45,6 +45,11 @@ class RecipeDetailsVC: UIViewController {
         setupTableView()
         setupUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tabBarController?.tabBar.isHidden = false
+    }
     
     func setupTableView() {
         ingredientsTableView.delegate = self
@@ -52,6 +57,14 @@ class RecipeDetailsVC: UIViewController {
         ingredientsTableView.register(.init(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
+    func createRightBurButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "vector"), style: .done, target: self, action: #selector(addTapped))
+    }
+    
+    @objc
+    func addTapped(){
+        
+    }
 }
 
 // MARK: - Extension
@@ -74,6 +87,8 @@ extension RecipeDetailsVC: UITableViewDelegate, UITableViewDataSource {
 extension RecipeDetailsVC {
     
     private func setupUI() {
+        createRightBurButton()
+        
         ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 8
         
         ingredientImageView.fetchImage(from: presenter.recipe.image)
