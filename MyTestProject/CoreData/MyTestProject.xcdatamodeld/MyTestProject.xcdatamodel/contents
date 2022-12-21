@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LikedFoodCD" representedClassName="LikedFoodCD" syncable="YES">
+        <attribute name="calories" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="recipeAuthor" optional="YES" attributeType="String"/>
+        <attribute name="recipeImage" optional="YES" attributeType="String"/>
+        <attribute name="recipeName" optional="YES" attributeType="String"/>
+        <attribute name="totalTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalWeight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="likedIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LikedIngredientCD"/>
+    </entity>
+    <entity name="LikedIngredientCD" representedClassName="LikedIngredientCD" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="likedIngredientCD" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LikedFoodCD"/>
+    </entity>
+</model>

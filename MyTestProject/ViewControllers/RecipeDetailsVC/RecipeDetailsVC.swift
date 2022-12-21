@@ -45,11 +45,6 @@ class RecipeDetailsVC: UIViewController {
         setupTableView()
         setupUI()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        tabBarController?.tabBar.isHidden = false
-    }
     
     func setupTableView() {
         ingredientsTableView.delegate = self
@@ -63,7 +58,7 @@ class RecipeDetailsVC: UIViewController {
     
     @objc
     func addTapped(){
-        
+        presenter.saveRecipeInDataBase()
     }
 }
 
@@ -71,13 +66,13 @@ class RecipeDetailsVC: UIViewController {
 
 extension RecipeDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.recipe.ingredients.count
+        presenter.detailedRecipe.ingredients.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! IngredientsTableViewCell
         
-        let ingredient = presenter.recipe.ingredients[indexPath.row]
+        let ingredient = presenter.detailedRecipe.ingredients[indexPath.row]
         cell.config(with: ingredient)
         
         return cell
@@ -91,13 +86,13 @@ extension RecipeDetailsVC {
         
         ingredientImageView.layer.cornerRadius = ingredientImageView.bounds.width / 8
         
-        ingredientImageView.fetchImage(from: presenter.recipe.image)
+        ingredientImageView.fetchImage(from: presenter.detailedRecipe.image)
         
         navigationItem.largeTitleDisplayMode = .never
         
-        caloriesLabel.text = "Calories: \(Int(presenter.recipe.calories)) cal"
-        weightLabel.text = "Weight: \(Int(presenter.recipe.totalWeight)) grams"
-        timeLabel.text = "Time: \(Int(presenter.recipe.totalTime)) min"
+        caloriesLabel.text = "Calories: \(Int(presenter.detailedRecipe.calories)) cal"
+        weightLabel.text = "Weight: \(Int(presenter.detailedRecipe.totalWeight)) grams"
+        timeLabel.text = "Time: \(Int(presenter.detailedRecipe.totalTime)) min"
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let button = UIButton()

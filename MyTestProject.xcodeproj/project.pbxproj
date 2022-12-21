@@ -37,10 +37,15 @@
 		C32038942933E214001C4CB3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038932933E214001C4CB3 /* Double.swift */; };
 		C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038952937403A001C4CB3 /* UINavBarAppearance.swift */; };
 		C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320389729374092001C4CB3 /* View+ActivityIndicator.swift */; };
+		C377881C294B80C5004A939E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377881B294B80C5004A939E /* CoreDataStore.swift */; };
 		C3894ED02938866A008057B7 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ECF2938866A008057B7 /* ImageView.swift */; };
 		C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED1293B44B9008057B7 /* StartVC.swift */; };
 		C3894ED4293B44B9008057B7 /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3894ED2293B44B9008057B7 /* StartVC.xib */; };
 		C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED6293BC4D3008057B7 /* StartPresenter.swift */; };
+		C3F341032952E64F006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F340FF2952E64F006A22F3 /* LikedFoodCD+CoreDataClass.swift */; };
+		C3F341042952E64F006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F341002952E64F006A22F3 /* LikedFoodCD+CoreDataProperties.swift */; };
+		C3F341052952E64F006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F341012952E64F006A22F3 /* LikedIngredientCD+CoreDataClass.swift */; };
+		C3F341062952E64F006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F341022952E64F006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,10 +81,15 @@
 		C32038932933E214001C4CB3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		C32038952937403A001C4CB3 /* UINavBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavBarAppearance.swift; sourceTree = "<group>"; };
 		C320389729374092001C4CB3 /* View+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		C377881B294B80C5004A939E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		C3894ECF2938866A008057B7 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		C3894ED1293B44B9008057B7 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		C3894ED2293B44B9008057B7 /* StartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
 		C3894ED6293BC4D3008057B7 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		C3F340FF2952E64F006A22F3 /* LikedFoodCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3F341002952E64F006A22F3 /* LikedFoodCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3F341012952E64F006A22F3 /* LikedIngredientCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3F341022952E64F006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,15 +122,15 @@
 		C3203840291C392B001C4CB3 /* MyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				C377881A294A76C2004A939E /* Storyboard */,
+				C3778819294A76AB004A939E /* Source */,
+				C32707E0294A6DFF00794667 /* CoreData */,
 				C320387A292408D1001C4CB3 /* ViewControllers */,
 				C3203870291C85D6001C4CB3 /* Networking */,
 				C320386D291C7F90001C4CB3 /* Extensions */,
 				C3203866291C43FE001C4CB3 /* Model */,
 				C320385E291C3A54001C4CB3 /* Navigator */,
 				C3203858291C39BD001C4CB3 /* Support */,
-				C320384D291C392D001C4CB3 /* Assets.xcassets */,
-				C320384F291C392D001C4CB3 /* LaunchScreen.storyboard */,
-				C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */,
 			);
 			path = MyTestProject;
 			sourceTree = "<group>";
@@ -181,6 +191,7 @@
 			children = (
 				C3203871291C866A001C4CB3 /* NetworkingService.swift */,
 				C3894ECF2938866A008057B7 /* ImageView.swift */,
+				C377881B294B80C5004A939E /* CoreDataStore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -243,6 +254,34 @@
 				C32038902931DAE9001C4CB3 /* IngredientsTableViewCell.xib */,
 			);
 			path = IngredientsCell;
+			sourceTree = "<group>";
+		};
+		C32707E0294A6DFF00794667 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C3F340FF2952E64F006A22F3 /* LikedFoodCD+CoreDataClass.swift */,
+				C3F341002952E64F006A22F3 /* LikedFoodCD+CoreDataProperties.swift */,
+				C3F341012952E64F006A22F3 /* LikedIngredientCD+CoreDataClass.swift */,
+				C3F341022952E64F006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */,
+				C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C3778819294A76AB004A939E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C320384D291C392D001C4CB3 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C377881A294A76C2004A939E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C320384F291C392D001C4CB3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		C3894ED5293BC4AA008057B7 /* StartVC */ = {
@@ -339,23 +378,28 @@
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
 				C320385C291C3A3C001C4CB3 /* FoodCollectionViewVC.swift in Sources */,
 				C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */,
+				C3F341062952E64F006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */,
 				C3203874291DBD44001C4CB3 /* RecipeType.swift in Sources */,
 				C3203860291C3A6F001C4CB3 /* Assembler.swift in Sources */,
 				C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */,
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,
 				C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */,
+				C3F341052952E64F006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */,
 				C3203864291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift in Sources */,
 				C3894ED02938866A008057B7 /* ImageView.swift in Sources */,
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
 				C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */,
 				C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */,
 				C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */,
+				C3F341032952E64F006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */,
 				C32038912931DAE9001C4CB3 /* IngredientsTableViewCell.swift in Sources */,
 				C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */,
 				C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */,
+				C377881C294B80C5004A939E /* CoreDataStore.swift in Sources */,
 				C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */,
 				C32038942933E214001C4CB3 /* Double.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
+				C3F341042952E64F006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */,
 				C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

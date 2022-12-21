@@ -60,7 +60,7 @@ private extension ListFoodVC {
     }
     
     func setupTableView() {
-        tableView.layer.opacity = 0
+//        tableView.layer.opacity = 0
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -96,7 +96,7 @@ extension ListFoodVC: ListFoodVCProtocol {
         tableView.reloadData()
         view.hideActivityIndicatorView()
         
-        UIView.animate(withDuration: 3) {
+        UIView.animate(withDuration: 2) {
             self.tableView.layer.opacity = 1
         }
     }

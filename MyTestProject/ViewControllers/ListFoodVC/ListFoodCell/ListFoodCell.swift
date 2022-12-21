@@ -12,7 +12,7 @@ import UIKit
 class ListFoodCell: UITableViewCell {
     
     // MARK: - IBOutlets
-    
+   
     @IBOutlet private weak var recipeImage: ImageView!
     
     @IBOutlet private weak var recipeAuthorLabel: UILabel!

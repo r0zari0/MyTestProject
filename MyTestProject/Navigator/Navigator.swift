@@ -18,7 +18,6 @@ protocol NavigatorProtocol {
 class Navigator: NavigatorProtocol {
     
     private let assembler = Assembler()
-    private let networking = Networking()
     
     func showFoodCollectionViewVC(view: UIViewController) {
         let vc = assembler.createMainVC(navigator: self)
@@ -28,12 +27,12 @@ class Navigator: NavigatorProtocol {
     }
     
     func showListFoodVC(view: UIViewController, type: RecipeType) {
-        let vc = assembler.createListFoodVC(navigator: self, networking: networking, type: type)
+        let vc = assembler.createListFoodVC(navigator: self, type: type)
         view.navigationController?.pushViewController(vc, animated: true)
     }
     
     func showRecipeDetailVC(view: UIViewController, recipe: Recipe) {
-        let vc = assembler.createRecipeDetailsVC(networking: networking, recipe: recipe)
+        let vc = assembler.createRecipeDetailsVC(recipe: recipe)
         view.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -9,20 +9,23 @@ import Foundation
 import UIKit
 
 class Assembler {
+    private let networking = Networking()
+    private let dataBase = CoreDataStore()
+    
     func createMainVC(navigator: NavigatorProtocol) -> UIViewController {
         let vc = FlowController(navigator: navigator)
         return vc
     }
     
-    func createListFoodVC(navigator: NavigatorProtocol, networking: NetworkingProtocol, type: RecipeType) -> UIViewController {
+    func createListFoodVC(navigator: NavigatorProtocol, type: RecipeType) -> UIViewController {
         let presenter = ListFoodPresenter(navigator: navigator, networking: networking, type: type)
         let vc = ListFoodVC(presenter: presenter)
         presenter.view = vc
         return vc
     }
     
-    func createRecipeDetailsVC(networking: NetworkingProtocol, recipe: Recipe) -> UIViewController {
-        let presenter = RecipeDetailsPresenter(networking: networking, recipe: recipe)
+    func createRecipeDetailsVC(recipe: Recipe) -> UIViewController {
+        let presenter = RecipeDetailsPresenter(networking: networking, recipe: recipe, coreData: dataBase)
         let vc = RecipeDetailsVC(presenter: presenter)
         
         return vc
