@@ -14,7 +14,7 @@ protocol RecipeDetailsPresenterProtocol {
     var detailedRecipe: Recipe { get }
     
     func saveRecipeInDataBase()
-
+    
 }
 
 // MARK: - RecipeDetailsPresenter
@@ -24,13 +24,13 @@ class RecipeDetailsPresenter {
     // MARK: - Properties
     
     private let networking: NetworkingProtocol
-    private let coreData: CoreDataStorePresenter
+    private let coreData: CoreDataStoreProtocol
     
     var detailedRecipe: Recipe
     
     // MARK: - Init
     
-    init(networking: NetworkingProtocol, detailedRecipe: Recipe, coreData: CoreDataStorePresenter) {
+    init(networking: NetworkingProtocol, detailedRecipe: Recipe, coreData: CoreDataStoreProtocol) {
         self.networking = networking
         self.detailedRecipe = detailedRecipe
         self.coreData = coreData
@@ -41,20 +41,6 @@ class RecipeDetailsPresenter {
 
 extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     
-    func getModelDataBase(closure: ([Recipe]) -> Void) {
-        let recipeFetchRequest = LikedFoodCD.fetchRequest()
-        
-        do {
-            let object = try coreData.context.fetch(recipeFetchRequest)
-            
-            let recipes = object.map(Recipe.init(recipe:))
-            
-            closure(recipes)
-        } catch {
-            print("error")
-        }
-    }
-    
     func saveRecipeInDataBase() {
         let recipeDataBase = LikedFoodCD(context: coreData.context)
         recipeDataBase.recipeName = detailedRecipe.label
@@ -63,6 +49,7 @@ extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
         recipeDataBase.totalTime = detailedRecipe.totalTime
         recipeDataBase.totalWeight = detailedRecipe.totalWeight
         recipeDataBase.calories = detailedRecipe.calories
+        recipeDataBase.url = detailedRecipe.url
         
         detailedRecipe.ingredients.forEach { ingredient in
             let dataBaseIngredient = LikedIngredientCD(context: self.coreData.context)
@@ -73,6 +60,4 @@ extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
         }
         coreData.saveContext()
     }
-    
-    
 }

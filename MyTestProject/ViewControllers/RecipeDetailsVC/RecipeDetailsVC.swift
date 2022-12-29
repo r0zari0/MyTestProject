@@ -27,6 +27,8 @@ class RecipeDetailsVC: UIViewController {
     
     private let cellIdentifier: String = String(describing: "IngredientsTableViewCell")
     
+    private var isFavorite: Bool = true
+    
     // MARK: - Init
     
     init(presenter: RecipeDetailsPresenterProtocol) {
@@ -53,11 +55,14 @@ class RecipeDetailsVC: UIViewController {
     }
     
     func createRightBurButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "vector"), style: .done, target: self, action: #selector(addTapped))
+        let image = UIImage(named: "tabBarHeart")?.withTintColor(isFavorite ? .purple : .white, renderingMode: .alwaysOriginal)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tabBarHeart"), style: .done, target: self, action: #selector(addTapped))
     }
     
     @objc
     func addTapped(){
+        isFavorite.toggle()
         presenter.saveRecipeInDataBase()
     }
 }
@@ -94,6 +99,7 @@ extension RecipeDetailsVC {
         weightLabel.text = "Weight: \(Int(presenter.detailedRecipe.totalWeight)) grams"
         timeLabel.text = "Time: \(Int(presenter.detailedRecipe.totalTime)) min"
     }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let button = UIButton()
         button.tintColor = .red

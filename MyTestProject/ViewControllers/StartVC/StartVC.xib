@@ -33,7 +33,7 @@
                         <constraint firstAttribute="height" constant="44" id="L6n-iO-80r"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Button">
+                    <buttonConfiguration key="configuration" style="gray" title="Enter">
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" name="buttonColor"/>
                     </buttonConfiguration>

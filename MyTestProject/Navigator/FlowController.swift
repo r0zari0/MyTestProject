@@ -12,11 +12,16 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
     private var embedTabBarVC: UITabBarController = UITabBarController()
     
     private lazy var startVC: UIViewController = instantiateStartVC()
+    private lazy var favoriteFoodVC: UIViewController = favoriteListFoodVC()
     
     let navigator: NavigatorProtocol
+    let networking: NetworkingProtocol
+    let coreData: CoreDataStoreProtocol
     
-    init(navigator: NavigatorProtocol) {
+    init(navigator: NavigatorProtocol, networking: NetworkingProtocol, coreData: CoreDataStoreProtocol) {
         self.navigator = navigator
+        self.networking = networking
+        self.coreData = coreData
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -51,16 +56,37 @@ extension FlowController {
         )
         return navigationVC
     }
+    
+    func favoriteListFoodVC() -> UIViewController {
+        let presenter = ListFoodPresenter(
+            navigator: navigator,
+            networking: networking,
+            coreData: coreData,
+            type: .chicken,
+            screenType: .favoriteRecipe
+        )
+        
+        let vc = ListFoodVC(presenter: presenter)
+        presenter.view = vc
+        let navigationVC = UINavigationController(rootViewController: vc)
+        vc.tabBarItem = UITabBarItem(
+            title: "Favorites", image: UIImage(named: "tabBarHeart"),
+            selectedImage: UIImage(named: "tabBarHeartSelected")
+        )
+        
+        return navigationVC
+    }
+    
 }
 
 private extension FlowController {
     func initialSetup() {
         view.backgroundColor = .black
         embedTabBarVC.delegate = self
-        embedTabBarVC.viewControllers = [startVC]
+        embedTabBarVC.viewControllers = [startVC, favoriteFoodVC]
         embedTabBarVC.tabBar.isTranslucent = false
         embedTabBarVC.tabBar.tintColor = .black
-        embedTabBarVC.tabBar.unselectedItemTintColor = .black
+        embedTabBarVC.tabBar.unselectedItemTintColor = .gray
         addChild(embedTabBarVC, toContainer: view)
     }
 }

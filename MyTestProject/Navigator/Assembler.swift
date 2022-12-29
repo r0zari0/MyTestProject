@@ -13,19 +13,32 @@ class Assembler {
     private let dataBase = CoreDataStore()
     
     func createMainVC(navigator: NavigatorProtocol) -> UIViewController {
-        let vc = FlowController(navigator: navigator)
+        let vc = FlowController(navigator: navigator, networking: networking, coreData: dataBase)
         return vc
     }
     
-    func createListFoodVC(navigator: NavigatorProtocol, type: RecipeType) -> UIViewController {
-        let presenter = ListFoodPresenter(navigator: navigator, networking: networking, type: type)
+    func createListFoodVC(navigator: NavigatorProtocol, type: RecipeType, screenType: ScreenType) -> UIViewController {
+        let presenter = ListFoodPresenter(
+            navigator: navigator,
+            networking: networking,
+            coreData: dataBase,
+            type: type,
+            screenType: screenType
+        )
+        
         let vc = ListFoodVC(presenter: presenter)
         presenter.view = vc
+        
         return vc
     }
     
     func createRecipeDetailsVC(recipe: Recipe) -> UIViewController {
-        let presenter = RecipeDetailsPresenter(networking: networking, recipe: recipe, coreData: dataBase)
+        let presenter = RecipeDetailsPresenter(
+            networking: networking,
+            detailedRecipe: recipe,
+            coreData: dataBase
+        )
+        
         let vc = RecipeDetailsVC(presenter: presenter)
         
         return vc

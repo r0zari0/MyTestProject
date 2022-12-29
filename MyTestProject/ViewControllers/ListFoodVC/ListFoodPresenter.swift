@@ -25,17 +25,26 @@ class ListFoodPresenter: ListFoodPresenterProtocol {
     
     private let navigator: NavigatorProtocol
     private let networking: NetworkingProtocol
+    private let coreData: CoreDataStoreProtocol
     private let type: RecipeType
+    private let screenType: ScreenType
     
     var foodRecipes: [Hit] = []
     weak var view: ListFoodVCProtocol?
     
     // MARK: - Init
     
-    init(navigator: NavigatorProtocol, networking: NetworkingProtocol, type: RecipeType) {
+    init(navigator: NavigatorProtocol,
+         networking: NetworkingProtocol,
+         coreData: CoreDataStoreProtocol,
+         type: RecipeType,
+         screenType: ScreenType
+    ) {
         self.navigator = navigator
         self.networking = networking
+        self.coreData = coreData
         self.type = type
+        self.screenType = screenType
     }
 }
 
@@ -43,11 +52,28 @@ class ListFoodPresenter: ListFoodPresenterProtocol {
 
 extension ListFoodPresenter {
     func getRecipes() {
+        switch screenType {
+        case .internetRecipe:
+            getInternetRecipes()
+        case .favoriteRecipe:
+            getRecipesCD()
+        }
+    }
+    
+    func getInternetRecipes() {
         view?.setupTitle(title: type.rawValue + " recipies")
         networking.getModel(type: type) { hit in
             self.foodRecipes = hit
             self.view?.reload()
-            
+        }
+    }
+    
+    func getRecipesCD() {
+        coreData.fetchRecipes { recipe in
+            let likedRecipes = recipe.map(Recipe.init(recipe:))
+            let hits = likedRecipes.map { Hit(recipe: $0) }
+            self.foodRecipes = hits
+            view?.reload()
         }
     }
     

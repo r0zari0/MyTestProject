@@ -12,7 +12,7 @@ import UIKit
 
 protocol FoodCollectionViewPresenterProtocol {
     var recipeTypes: [RecipeType] { get }
-    func showListFoodVC(indexPath: Int, view: UIViewController)
+    func showListFoodVC(indexPath: Int, view: UIViewController, screenType: ScreenType)
 }
 
 // MARK: - StartScreenPresenter
@@ -34,8 +34,8 @@ class FoodCollectionViewPresenter {
     // MARK: - Extension
 
 extension FoodCollectionViewPresenter: FoodCollectionViewPresenterProtocol {
-    func showListFoodVC(indexPath: Int, view: UIViewController) {
+    func showListFoodVC(indexPath: Int, view: UIViewController, screenType: ScreenType) {
         let userAction = recipeTypes[indexPath]
-        navigator.showListFoodVC(view: view, type: userAction)
+        navigator.showListFoodVC(view: view, type: userAction, screenType: screenType)
     }
 }

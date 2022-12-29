@@ -63,7 +63,7 @@ private extension FoodCollectionViewVC {
 
 extension FoodCollectionViewVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.showListFoodVC(indexPath: indexPath.item, view: self)
+        presenter.showListFoodVC(indexPath: indexPath.item, view: self, screenType: .internetRecipe)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

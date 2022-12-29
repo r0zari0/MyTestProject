@@ -10,15 +10,16 @@ import CoreData
 
 // MARK: - Protocol
 
-protocol CoreDataStorePresenter {
+protocol CoreDataStoreProtocol {
     var context: NSManagedObjectContext { get }
     
     func saveContext()
+    func fetchRecipes(completion: (([LikedFoodCD]) -> Void))
 }
 
 // MARK: - CoreDataStore
 
-class CoreDataStore: CoreDataStorePresenter {
+class CoreDataStore: CoreDataStoreProtocol {
     
     // MARK: - Core Data stack
     
@@ -50,13 +51,13 @@ class CoreDataStore: CoreDataStorePresenter {
         }
     }
     
-    func fetchRequest() -> [Recipe] {
+    func fetchRecipes(completion: (([LikedFoodCD]) -> Void)) {
         let fetchRequest: NSFetchRequest<LikedFoodCD> = LikedFoodCD.fetchRequest()
         
         do {
             let objects = try context.fetch(fetchRequest)
-            let likedRecipies = objects.map(Recipe.init(recipe:))
-            
+           
+            completion(objects)
         } catch let error {
             print(error)
         }

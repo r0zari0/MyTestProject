@@ -27,7 +27,7 @@ struct Recipe: Decodable {
     let totalTime: Double
     
     init(label: String, image: String, source: String, calories: Double,
-         totalWeight: Double, totalTime: Double, ingredients: [Ingredient]) {
+         totalWeight: Double, totalTime: Double, ingredients: [Ingredient], url: String) {
         self.label = label
         self.image = image
         self.source = source
@@ -35,6 +35,7 @@ struct Recipe: Decodable {
         self.totalWeight = totalWeight
         self.totalTime = totalTime
         self.ingredients = ingredients
+        self.url = url
     }
 
     init(recipe: LikedFoodCD) {
@@ -44,6 +45,7 @@ struct Recipe: Decodable {
         self.calories = recipe.calories
         self.totalWeight = recipe.totalWeight
         self.totalTime = recipe.totalTime
+        self.url = recipe.url
         
         let ingredientCD = recipe.likedIngredients.array(of: LikedIngredientCD.self)
         let appIngredients = ingredientCD.map { Ingredient(ingredientCD: $0) }
