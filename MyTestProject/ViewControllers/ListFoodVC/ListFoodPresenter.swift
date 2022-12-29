@@ -15,6 +15,7 @@ protocol ListFoodPresenterProtocol {
     
     func getRecipes()
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController)
+    func deleteRecipe(indexPath: IndexPath, closure: () -> Void)
 }
 
 // MARK: - ListFoodPresenter
@@ -75,6 +76,13 @@ extension ListFoodPresenter {
             self.foodRecipes = hits
             view?.reload()
         }
+    }
+    
+    func deleteRecipe(indexPath: IndexPath, closure: () -> Void) {
+        coreData.deleteRecipe(id: foodRecipes[indexPath.row].recipe.id ?? UUID())
+        foodRecipes.remove(at: indexPath.row)
+        
+        closure()
     }
     
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController) {

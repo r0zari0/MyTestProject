@@ -15,6 +15,7 @@ protocol CoreDataStoreProtocol {
     
     func saveContext()
     func fetchRecipes(completion: (([LikedFoodCD]) -> Void))
+    func deleteRecipe(id: UUID)
 }
 
 // MARK: - CoreDataStore
@@ -58,6 +59,25 @@ class CoreDataStore: CoreDataStoreProtocol {
             let objects = try context.fetch(fetchRequest)
            
             completion(objects)
+        } catch let error {
+            print(error)
+        }
+    }
+    
+    func deleteRecipe(id: UUID) {
+        let fetheRequest: NSFetchRequest<LikedFoodCD> = LikedFoodCD.fetchRequest()
+        fetheRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+        
+        let context = persistentContainer.viewContext
+        
+        do {
+            let recipes = try context.fetch(fetheRequest)
+            for recipe in recipes {
+                context.delete(recipe)
+                print("DELETE")
+            }
+            saveContext()
+            print("DELETE")
         } catch let error {
             print(error)
         }

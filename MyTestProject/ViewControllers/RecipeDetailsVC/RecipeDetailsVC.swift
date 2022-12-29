@@ -55,14 +55,11 @@ class RecipeDetailsVC: UIViewController {
     }
     
     func createRightBurButton() {
-        let image = UIImage(named: "tabBarHeart")?.withTintColor(isFavorite ? .purple : .white, renderingMode: .alwaysOriginal)
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tabBarHeart"), style: .done, target: self, action: #selector(addTapped))
     }
     
     @objc
     func addTapped(){
-        isFavorite.toggle()
         presenter.saveRecipeInDataBase()
     }
 }
@@ -102,9 +99,10 @@ extension RecipeDetailsVC {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let button = UIButton()
+        button.backgroundColor = UIColor(named: "buttonColor")
         button.tintColor = .red
         button.setTitle("Full Recipe", for: .normal)
-        button.setTitleColor(.yellow, for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 6
         
         return button

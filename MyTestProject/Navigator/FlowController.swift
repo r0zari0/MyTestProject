@@ -13,6 +13,7 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
     
     private lazy var startVC: UIViewController = instantiateStartVC()
     private lazy var favoriteFoodVC: UIViewController = favoriteListFoodVC()
+    private lazy var myProfileVC: UIViewController = profileVC()
     
     let navigator: NavigatorProtocol
     let networking: NetworkingProtocol
@@ -77,13 +78,22 @@ extension FlowController {
         return navigationVC
     }
     
+    func profileVC() -> UIViewController {
+        let presenter = ProfilePresenter(navigator: navigator)
+        let vc = ProfileVC(presenter: presenter)
+        let navigationVC = UINavigationController(rootViewController: vc)
+        vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileImage"), selectedImage: UIImage(named: "profileImage"))
+        
+        return navigationVC
+    }
+    
 }
 
 private extension FlowController {
     func initialSetup() {
         view.backgroundColor = .black
         embedTabBarVC.delegate = self
-        embedTabBarVC.viewControllers = [startVC, favoriteFoodVC]
+        embedTabBarVC.viewControllers = [startVC, favoriteFoodVC, myProfileVC]
         embedTabBarVC.tabBar.isTranslucent = false
         embedTabBarVC.tabBar.tintColor = .black
         embedTabBarVC.tabBar.unselectedItemTintColor = .gray

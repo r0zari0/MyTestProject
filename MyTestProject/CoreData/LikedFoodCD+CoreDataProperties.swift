@@ -2,7 +2,7 @@
 //  LikedFoodCD+CoreDataProperties.swift
 //  MyTestProject
 //
-//  Created by Max Stovolos on 12/23/22.
+//  Created by Max Stovolos on 12/29/22.
 //
 //
 
@@ -23,6 +23,7 @@ extension LikedFoodCD {
     @NSManaged public var totalTime: Double
     @NSManaged public var totalWeight: Double
     @NSManaged public var url: String?
+    @NSManaged public var id: UUID?
     @NSManaged public var likedIngredients: NSSet?
 
 }

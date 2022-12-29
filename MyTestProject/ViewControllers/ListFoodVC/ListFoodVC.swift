@@ -60,7 +60,7 @@ private extension ListFoodVC {
     }
     
     func setupTableView() {
-//        tableView.layer.opacity = 0
+        tableView.layer.opacity = 0
         
         tableView.dataSource = self
         tableView.delegate = self

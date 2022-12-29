@@ -2,7 +2,7 @@
 //  LikedIngredientCD+CoreDataProperties.swift
 //  MyTestProject
 //
-//  Created by Max Stovolos on 12/23/22.
+//  Created by Max Stovolos on 12/29/22.
 //
 //
 

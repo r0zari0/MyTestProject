@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31D01F9295D750200CEA85E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D01F7295D750200CEA85E /* ProfileVC.swift */; };
+		C31D01FA295D750200CEA85E /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31D01F8295D750200CEA85E /* ProfileVC.xib */; };
+		C31D01FC295D7C0C00CEA85E /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D01FB295D7C0C00CEA85E /* ProfilePresenter.swift */; };
 		C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203841291C392B001C4CB3 /* AppDelegate.swift */; };
 		C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3203843291C392B001C4CB3 /* SceneDelegate.swift */; };
 		C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */; };
@@ -42,14 +45,17 @@
 		C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED1293B44B9008057B7 /* StartVC.swift */; };
 		C3894ED4293B44B9008057B7 /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3894ED2293B44B9008057B7 /* StartVC.xib */; };
 		C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED6293BC4D3008057B7 /* StartPresenter.swift */; };
-		C3F3410B295634A4006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34107295634A4006A22F3 /* LikedIngredientCD+CoreDataClass.swift */; };
-		C3F3410C295634A4006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34108295634A4006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */; };
-		C3F3410D295634A4006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34109295634A4006A22F3 /* LikedFoodCD+CoreDataClass.swift */; };
-		C3F3410E295634A4006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3410A295634A4006A22F3 /* LikedFoodCD+CoreDataProperties.swift */; };
 		C3F3411029590033006A22F3 /* TypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F3410F29590033006A22F3 /* TypeScreen.swift */; };
+		C3F34115295D68E1006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34111295D68E1006A22F3 /* LikedIngredientCD+CoreDataClass.swift */; };
+		C3F34116295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34112295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */; };
+		C3F34117295D68E1006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34113295D68E1006A22F3 /* LikedFoodCD+CoreDataClass.swift */; };
+		C3F34118295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F34114295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31D01F7295D750200CEA85E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C31D01F8295D750200CEA85E /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		C31D01FB295D7C0C00CEA85E /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		C320383E291C392B001C4CB3 /* MyTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3203841291C392B001C4CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3203843291C392B001C4CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,11 +93,11 @@
 		C3894ED1293B44B9008057B7 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		C3894ED2293B44B9008057B7 /* StartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
 		C3894ED6293BC4D3008057B7 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
-		C3F34107295634A4006A22F3 /* LikedIngredientCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C3F34108295634A4006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C3F34109295634A4006A22F3 /* LikedFoodCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C3F3410A295634A4006A22F3 /* LikedFoodCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C3F3410F29590033006A22F3 /* TypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeScreen.swift; sourceTree = "<group>"; };
+		C3F34111295D68E1006A22F3 /* LikedIngredientCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3F34112295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedIngredientCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C3F34113295D68E1006A22F3 /* LikedFoodCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C3F34114295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikedFoodCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31D01F6295D74C100CEA85E /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				C31D01F7295D750200CEA85E /* ProfileVC.swift */,
+				C31D01F8295D750200CEA85E /* ProfileVC.xib */,
+				C31D01FB295D7C0C00CEA85E /* ProfilePresenter.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
 		C3203835291C392B001C4CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +227,7 @@
 		C320387A292408D1001C4CB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C31D01F6295D74C100CEA85E /* ProfileVC */,
 				C3894ED5293BC4AA008057B7 /* StartVC */,
 				C320388729277309001C4CB3 /* RecipeDetailsVC */,
 				C320387B292408E6001C4CB3 /* ListFoodVC */,
@@ -262,10 +279,10 @@
 		C32707E0294A6DFF00794667 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				C3F34107295634A4006A22F3 /* LikedIngredientCD+CoreDataClass.swift */,
-				C3F34108295634A4006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */,
-				C3F34109295634A4006A22F3 /* LikedFoodCD+CoreDataClass.swift */,
-				C3F3410A295634A4006A22F3 /* LikedFoodCD+CoreDataProperties.swift */,
+				C3F34111295D68E1006A22F3 /* LikedIngredientCD+CoreDataClass.swift */,
+				C3F34112295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift */,
+				C3F34113295D68E1006A22F3 /* LikedFoodCD+CoreDataClass.swift */,
+				C3F34114295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift */,
 				C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -359,6 +376,7 @@
 				C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */,
 				C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */,
 				C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */,
+				C31D01FA295D750200CEA85E /* ProfileVC.xib in Resources */,
 				C32038922931DAE9001C4CB3 /* IngredientsTableViewCell.xib in Resources */,
 				C3203851291C392D001C4CB3 /* LaunchScreen.storyboard in Resources */,
 				C320384E291C392D001C4CB3 /* Assets.xcassets in Resources */,
@@ -375,33 +393,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				C320387E29240922001C4CB3 /* ListFoodVC.swift in Sources */,
+				C3F34115295D68E1006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */,
 				C320388529241228001C4CB3 /* ListFoodCell.swift in Sources */,
 				C3203872291C866A001C4CB3 /* NetworkingService.swift in Sources */,
 				C320387829200077001C4CB3 /* UserActionCell.swift in Sources */,
 				C3203842291C392B001C4CB3 /* AppDelegate.swift in Sources */,
+				C3F34117295D68E1006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */,
 				C320385C291C3A3C001C4CB3 /* FoodCollectionViewVC.swift in Sources */,
 				C320386C291C7AA4001C4CB3 /* FlowController.swift in Sources */,
 				C3203874291DBD44001C4CB3 /* RecipeType.swift in Sources */,
 				C3203860291C3A6F001C4CB3 /* Assembler.swift in Sources */,
+				C31D01FC295D7C0C00CEA85E /* ProfilePresenter.swift in Sources */,
 				C3203844291C392B001C4CB3 /* SceneDelegate.swift in Sources */,
 				C320386F291C7FC0001C4CB3 /* UIViewController + Child.swift in Sources */,
+				C3F34116295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */,
+				C3F34118295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */,
 				C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */,
 				C3203864291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift in Sources */,
-				C3F3410C295634A4006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */,
 				C3894ED02938866A008057B7 /* ImageView.swift in Sources */,
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
 				C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */,
+				C31D01F9295D750200CEA85E /* ProfileVC.swift in Sources */,
 				C320388D292773D5001C4CB3 /* RecipeDetailsPresenter.swift in Sources */,
 				C320384C291C392B001C4CB3 /* MyTestProject.xcdatamodeld in Sources */,
 				C32038912931DAE9001C4CB3 /* IngredientsTableViewCell.swift in Sources */,
 				C3203862291C3A7C001C4CB3 /* Navigator.swift in Sources */,
 				C320388A292773A5001C4CB3 /* RecipeDetailsVC.swift in Sources */,
 				C377881C294B80C5004A939E /* CoreDataStore.swift in Sources */,
-				C3F3410B295634A4006A22F3 /* LikedIngredientCD+CoreDataClass.swift in Sources */,
 				C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */,
 				C32038942933E214001C4CB3 /* Double.swift in Sources */,
-				C3F3410E295634A4006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */,
-				C3F3410D295634A4006A22F3 /* LikedFoodCD+CoreDataClass.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
 				C3F3411029590033006A22F3 /* TypeScreen.swift in Sources */,
 				C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */,
