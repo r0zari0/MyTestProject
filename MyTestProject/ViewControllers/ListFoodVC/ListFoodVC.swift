@@ -20,6 +20,8 @@ class ListFoodVC: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var emptyLabel: UILabel!
+    
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
@@ -43,11 +45,20 @@ class ListFoodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tabBarController?.tabBar.isHidden = true пропадает на всех экранах
         setupUI()
+        
+        if presenter.screenType == .internetRecipe {
+            presenter.getInternetRecipes()
+        }
         view.showActivityIndicator()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if presenter.screenType == .favoriteRecipe {
+            presenter.getRecipesCD() 
+        }
+    }
 }
 
     // MARK: - Extension
@@ -55,7 +66,6 @@ class ListFoodVC: UIViewController {
 private extension ListFoodVC {
     func setupUI() {
         setupTableView()
-        presenter.getRecipes()
         navigationItem.largeTitleDisplayMode = .never
     }
     
@@ -98,7 +108,12 @@ extension ListFoodVC: ListFoodVCProtocol {
         
         UIView.animate(withDuration: 2) {
             self.tableView.layer.opacity = 1
+            if self.presenter.screenType == .favoriteRecipe {
+                self.emptyLabel.isHidden = !self.presenter.foodRecipes.isEmpty
+            }
         }
+        
+       
     }
 }
 

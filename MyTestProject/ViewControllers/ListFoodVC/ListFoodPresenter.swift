@@ -12,10 +12,11 @@ import UIKit
 
 protocol ListFoodPresenterProtocol {
     var foodRecipes: [Hit] { get }
+    var screenType: ScreenType { get }
     
-    func getRecipes()
+    func getInternetRecipes()
+    func getRecipesCD()
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController)
-    func deleteRecipe(indexPath: IndexPath, closure: () -> Void)
 }
 
 // MARK: - ListFoodPresenter
@@ -24,14 +25,14 @@ class ListFoodPresenter: ListFoodPresenterProtocol {
     
     // MARK: - Properties
     
+    let screenType: ScreenType
+    var foodRecipes: [Hit] = []
+    weak var view: ListFoodVCProtocol?
+    
     private let navigator: NavigatorProtocol
     private let networking: NetworkingProtocol
     private let coreData: CoreDataStoreProtocol
     private let type: RecipeType
-    private let screenType: ScreenType
-    
-    var foodRecipes: [Hit] = []
-    weak var view: ListFoodVCProtocol?
     
     // MARK: - Init
     
@@ -52,17 +53,9 @@ class ListFoodPresenter: ListFoodPresenterProtocol {
 // MARK: - Extension
 
 extension ListFoodPresenter {
-    func getRecipes() {
-        switch screenType {
-        case .internetRecipe:
-            getInternetRecipes()
-        case .favoriteRecipe:
-            getRecipesCD()
-        }
-    }
-    
     func getInternetRecipes() {
         view?.setupTitle(title: type.rawValue + " recipies")
+        
         networking.getModel(type: type) { hit in
             self.foodRecipes = hit
             self.view?.reload()
@@ -70,19 +63,12 @@ extension ListFoodPresenter {
     }
     
     func getRecipesCD() {
-        coreData.fetchRecipes { recipe in
+        coreData.fetchRecipes { [weak self] recipe in
             let likedRecipes = recipe.map(Recipe.init(recipe:))
             let hits = likedRecipes.map { Hit(recipe: $0) }
-            self.foodRecipes = hits
-            view?.reload()
+            self?.foodRecipes = hits
+            self?.view?.reload()
         }
-    }
-    
-    func deleteRecipe(indexPath: IndexPath, closure: () -> Void) {
-        coreData.deleteRecipe(id: foodRecipes[indexPath.row].recipe.id ?? UUID())
-        foodRecipes.remove(at: indexPath.row)
-        
-        closure()
     }
     
     func showRecipeDetailVC(with recipe: Recipe, view: UIViewController) {

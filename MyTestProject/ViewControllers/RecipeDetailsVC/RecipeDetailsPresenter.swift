@@ -12,6 +12,7 @@ import UIKit
 
 protocol RecipeDetailsPresenterProtocol {
     var detailedRecipe: Recipe { get }
+    var isFavorite: Bool { get set }
     
     func saveRecipeInDataBase()
     
@@ -23,10 +24,11 @@ class RecipeDetailsPresenter {
     
     // MARK: - Properties
     
+    var isFavorite: Bool = false
+    var detailedRecipe: Recipe
+    
     private let networking: NetworkingProtocol
     private let coreData: CoreDataStoreProtocol
-    
-    var detailedRecipe: Recipe
     
     // MARK: - Init
     
@@ -34,6 +36,8 @@ class RecipeDetailsPresenter {
         self.networking = networking
         self.detailedRecipe = detailedRecipe
         self.coreData = coreData
+        
+        checkIfElementInCD()
     }
 }
 
@@ -41,7 +45,16 @@ class RecipeDetailsPresenter {
 
 extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
     
+    func checkIfElementInCD() {
+        isFavorite = coreData.fetchRequestIfConsistElement(with: detailedRecipe.label)
+    }
+    
     func saveRecipeInDataBase() {
+        guard !coreData.fetchRequestIfConsistElement(with: detailedRecipe.label) else {
+            coreData.deleteRecipe(label: detailedRecipe.label)
+            return
+        }
+                
         let recipeDataBase = LikedFoodCD(context: coreData.context)
         recipeDataBase.recipeName = detailedRecipe.label
         recipeDataBase.recipeImage = detailedRecipe.image

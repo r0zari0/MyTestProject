@@ -23,11 +23,9 @@ class RecipeDetailsVC: UIViewController {
     
     // MARK: - Properties
     
-    private let presenter: RecipeDetailsPresenterProtocol
+    private var presenter: RecipeDetailsPresenterProtocol
     
     private let cellIdentifier: String = String(describing: "IngredientsTableViewCell")
-    
-    private var isFavorite: Bool = true
     
     // MARK: - Init
     
@@ -55,11 +53,13 @@ class RecipeDetailsVC: UIViewController {
     }
     
     func createRightBurButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tabBarHeart"), style: .done, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: presenter.isFavorite ? "tabBarHeartSelected" :"tabBarHeart"), style: .done, target: self, action: #selector(addTapped))
     }
     
     @objc
     func addTapped(){
+        presenter.isFavorite.toggle()
+        createRightBurButton()
         presenter.saveRecipeInDataBase()
     }
 }
