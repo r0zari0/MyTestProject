@@ -32,11 +32,12 @@ class Assembler {
         return vc
     }
     
-    func createRecipeDetailsVC(recipe: Recipe) -> UIViewController {
+    func createRecipeDetailsVC(navigator: NavigatorProtocol, recipe: Recipe) -> UIViewController {
         let presenter = RecipeDetailsPresenter(
             networking: networking,
             detailedRecipe: recipe,
-            coreData: dataBase
+            coreData: dataBase,
+            navigator: navigator
         )
         
         let vc = RecipeDetailsVC(presenter: presenter)
@@ -47,6 +48,12 @@ class Assembler {
     func createStartVC(navigator: NavigatorProtocol) -> UIViewController {
         let presenter = StartPresenter(navigator: navigator)
         let vc = StartVC(presenter: presenter)
+        
+        return vc
+    }
+    
+    func createWebViewVC(url: String) -> UIViewController {
+        let vc = WebViewVC(url: url)
         
         return vc
     }

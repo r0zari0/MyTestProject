@@ -59,6 +59,11 @@ class ListFoodVC: UIViewController {
             presenter.getRecipesCD() 
         }
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        hidesBottomBarWhenPushed = false
+    }
 }
 
     // MARK: - Extension

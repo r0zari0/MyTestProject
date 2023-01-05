@@ -48,7 +48,7 @@ private extension FoodCollectionViewVC {
     }
     
     func setupNavigationController() {
-        title = "Recipies" 
+        title = "Recipes" 
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }

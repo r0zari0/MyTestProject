@@ -5,10 +5,10 @@
 //  Created by Max Stovolos on 11/27/22.
 //
 
-import Foundation
+import UIKit
 
-extension Double {
-    func truncate(places : Int)-> Double {
-        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+extension UIColor {
+    static var buttonColor: UIColor {
+        return UIColor(named: "tabBarPurple")!
     }
 }

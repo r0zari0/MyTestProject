@@ -15,7 +15,7 @@ protocol RecipeDetailsPresenterProtocol {
     var isFavorite: Bool { get set }
     
     func saveRecipeInDataBase()
-    
+    func showWebView(view: UIViewController)
 }
 
 // MARK: - RecipeDetailsPresenter
@@ -27,15 +27,22 @@ class RecipeDetailsPresenter {
     var isFavorite: Bool = false
     var detailedRecipe: Recipe
     
+    private let navigator: NavigatorProtocol
     private let networking: NetworkingProtocol
     private let coreData: CoreDataStoreProtocol
     
     // MARK: - Init
     
-    init(networking: NetworkingProtocol, detailedRecipe: Recipe, coreData: CoreDataStoreProtocol) {
+    init(
+        networking: NetworkingProtocol,
+         detailedRecipe: Recipe,
+         coreData: CoreDataStoreProtocol,
+         navigator: NavigatorProtocol
+    ) {
         self.networking = networking
         self.detailedRecipe = detailedRecipe
         self.coreData = coreData
+        self.navigator = navigator
         
         checkIfElementInCD()
     }
@@ -72,5 +79,9 @@ extension RecipeDetailsPresenter: RecipeDetailsPresenterProtocol {
             recipeDataBase.addToLikedIngredients(dataBaseIngredient)
         }
         coreData.saveContext()
+    }
+    
+    func showWebView(view: UIViewController) {
+        navigator.showWebViewVC(view: view, url: detailedRecipe.url ?? "Error")
     }
 }

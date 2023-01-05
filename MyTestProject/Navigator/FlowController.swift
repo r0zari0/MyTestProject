@@ -35,6 +35,7 @@ class FlowController: UIViewController, UITabBarControllerDelegate {
         super.viewDidLoad()
         initialSetup()
         setupTabBar()
+        TabBarAppearance.shared.setAppearance()
         setUIAppearanceCustomNavBar(type: .opaque)
     }
     
@@ -53,7 +54,7 @@ extension FlowController {
         let vc = FoodCollectionViewVC(presenter: presenter)
         let navigationVC = UINavigationController(rootViewController: vc)
         vc.tabBarItem = UITabBarItem(
-            title: "Recipies", image: UIImage(systemName: "book.fill"), selectedImage: UIImage(systemName: "book.fill")
+            title: "Recipies", image: UIImage(systemName: "book.fill"), selectedImage: UIImage(systemName: "myBookSelected")
         )
         return navigationVC
     }
@@ -82,7 +83,7 @@ extension FlowController {
         let presenter = ProfilePresenter(navigator: navigator)
         let vc = ProfileVC(presenter: presenter)
         let navigationVC = UINavigationController(rootViewController: vc)
-        vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileImage"), selectedImage: UIImage(named: "profileImage"))
+        vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileImage"), selectedImage: UIImage(named: "profileImageSelected"))
         
         return navigationVC
     }

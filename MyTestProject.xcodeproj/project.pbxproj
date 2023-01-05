@@ -40,6 +40,9 @@
 		C32038942933E214001C4CB3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038932933E214001C4CB3 /* Double.swift */; };
 		C32038962937403A001C4CB3 /* UINavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32038952937403A001C4CB3 /* UINavBarAppearance.swift */; };
 		C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C320389729374092001C4CB3 /* View+ActivityIndicator.swift */; };
+		C35AF0C729668E3C0024D0E4 /* TabBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AF0C629668E3C0024D0E4 /* TabBarAppearance.swift */; };
+		C35AF0CD2966975E0024D0E4 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AF0CB2966975E0024D0E4 /* WebViewVC.swift */; };
+		C35AF0CE2966975E0024D0E4 /* WebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35AF0CC2966975E0024D0E4 /* WebViewVC.xib */; };
 		C377881C294B80C5004A939E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377881B294B80C5004A939E /* CoreDataStore.swift */; };
 		C3894ED02938866A008057B7 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ECF2938866A008057B7 /* ImageView.swift */; };
 		C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3894ED1293B44B9008057B7 /* StartVC.swift */; };
@@ -88,6 +91,9 @@
 		C32038932933E214001C4CB3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		C32038952937403A001C4CB3 /* UINavBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavBarAppearance.swift; sourceTree = "<group>"; };
 		C320389729374092001C4CB3 /* View+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		C35AF0C629668E3C0024D0E4 /* TabBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAppearance.swift; sourceTree = "<group>"; };
+		C35AF0CB2966975E0024D0E4 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		C35AF0CC2966975E0024D0E4 /* WebViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewVC.xib; sourceTree = "<group>"; };
 		C377881B294B80C5004A939E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		C3894ECF2938866A008057B7 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		C3894ED1293B44B9008057B7 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 				C32038932933E214001C4CB3 /* Double.swift */,
 				C32038952937403A001C4CB3 /* UINavBarAppearance.swift */,
 				C320389729374092001C4CB3 /* View+ActivityIndicator.swift */,
+				C35AF0C629668E3C0024D0E4 /* TabBarAppearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 		C320387A292408D1001C4CB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C35AF0C8296696910024D0E4 /* WebViewVC */,
 				C31D01F6295D74C100CEA85E /* ProfileVC */,
 				C3894ED5293BC4AA008057B7 /* StartVC */,
 				C320388729277309001C4CB3 /* RecipeDetailsVC */,
@@ -286,6 +294,15 @@
 				C320384A291C392B001C4CB3 /* MyTestProject.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C35AF0C8296696910024D0E4 /* WebViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				C35AF0CB2966975E0024D0E4 /* WebViewVC.swift */,
+				C35AF0CC2966975E0024D0E4 /* WebViewVC.xib */,
+			);
+			path = WebViewVC;
 			sourceTree = "<group>";
 		};
 		C3778819294A76AB004A939E /* Source */ = {
@@ -373,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C320387929200077001C4CB3 /* UserActionCell.xib in Resources */,
+				C35AF0CE2966975E0024D0E4 /* WebViewVC.xib in Resources */,
 				C320388B292773A5001C4CB3 /* RecipeDetailsVC.xib in Resources */,
 				C320388629241228001C4CB3 /* ListFoodCell.xib in Resources */,
 				C320387F29240922001C4CB3 /* ListFoodVC.xib in Resources */,
@@ -409,6 +427,7 @@
 				C3F34116295D68E1006A22F3 /* LikedIngredientCD+CoreDataProperties.swift in Sources */,
 				C3F34118295D68E1006A22F3 /* LikedFoodCD+CoreDataProperties.swift in Sources */,
 				C3894ED7293BC4D3008057B7 /* StartPresenter.swift in Sources */,
+				C35AF0CD2966975E0024D0E4 /* WebViewVC.swift in Sources */,
 				C3203864291C3B15001C4CB3 /* FoodCollectionViewPresenter.swift in Sources */,
 				C3894ED02938866A008057B7 /* ImageView.swift in Sources */,
 				C32038812924093D001C4CB3 /* ListFoodPresenter.swift in Sources */,
@@ -423,6 +442,7 @@
 				C320389829374092001C4CB3 /* View+ActivityIndicator.swift in Sources */,
 				C32038942933E214001C4CB3 /* Double.swift in Sources */,
 				C3203868291C441F001C4CB3 /* Model.swift in Sources */,
+				C35AF0C729668E3C0024D0E4 /* TabBarAppearance.swift in Sources */,
 				C3F3411029590033006A22F3 /* TypeScreen.swift in Sources */,
 				C3894ED3293B44B9008057B7 /* StartVC.swift in Sources */,
 			);

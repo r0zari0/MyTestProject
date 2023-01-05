@@ -104,8 +104,14 @@ extension RecipeDetailsVC {
         button.setTitle("Full Recipe", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 6
+        button.addTarget(self, action: #selector(goToTheInternet), for: .touchUpInside)
         
         return button
+    }
+    
+    @objc
+    private func goToTheInternet() {
+        presenter.showWebView(view: self)
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
